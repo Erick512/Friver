@@ -17,7 +17,6 @@ module.exports = {
     getUserProfile: async (req, res) => {
         const profile = await Profile.findOne({userID: req.params.id})
         res.render('profile.ejs', {
-            user: req.user,
             profile: profile
         })
     },
@@ -31,6 +30,7 @@ module.exports = {
 
             await Profile.create({
                 userID: req.user.id,
+                userName: req.user.userName,
                 skills: req.body.skills.split(' '),
                 description: req.body.description,
                 email: req.body.email,

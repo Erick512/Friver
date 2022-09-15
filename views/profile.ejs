@@ -52,15 +52,12 @@
 
             <div class="heading">
                 <h2>Profile Preview</h2>
-                <% if(user.id == profile.userID){ %>
-                    <i class="editBtn fa-solid fa-pen-to-square"></i>
-                <%}%>
             </div>
 
             <header>
                 <div>
                     <img src="images/profilePic.png" alt="Profile Picture">
-                    <h3><%= user.userName %></h3>
+                    <h3><%= profile.userName %></h3>
                 </div>
             </header>
 

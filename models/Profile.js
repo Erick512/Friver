@@ -5,6 +5,10 @@ const ProfileSchema = new mongoose.Schema({
         type: String,
         require: true
     },
+    userName:{
+        type: String,
+        require: true
+    },
     skills: [{
         type: String,
         require: false
