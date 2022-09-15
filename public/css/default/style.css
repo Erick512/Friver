@@ -30,6 +30,7 @@ body {
     font-family: 'Roboto', sans-serif;
     height: 100%;
     overflow: auto;
+    overflow-x: hidden;
     background: linear-gradient(to right bottom , black 30%, #25a7a2) no-repeat;
 }
 
