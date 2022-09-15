@@ -1,0 +1,168 @@
+/* main */
+
+main {
+    margin: 0 20px;
+    overflow-x: hidden;
+    /* scroll-snap-type: y mandatory;
+    overflow-y: scroll; */
+}
+
+main > section {
+    height: 100vh;
+    /* scroll-snap-align: start; */
+}
+
+#first span {
+    /* color:#25a7a2; */
+    color: #77d0cd;
+
+}
+
+section span {
+    color: #77d0cd;
+}
+
+/* first section */
+
+#first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+#first h1 {
+    font-size: 2.3em;
+}
+
+#first img {
+    width: 230px;
+}
+
+/* second section */
+
+#second > div {
+    text-align: center;
+    padding-top: 120px;
+}
+
+#second ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+#second  li {
+    font-size: 2.5rem;
+    display: block;
+    position: absolute;
+    color: #77d0cd;
+}
+
+#second > ul .fa-car{
+    color: white;
+}
+
+#second > ul {
+    animation-play-state: paused;
+}
+
+.deg0 {
+    transform: translate(130px);
+    animation: deg0 20s linear infinite;
+}
+
+.deg90 {
+    transform: rotate(-90deg) translate(130px) rotate(90deg);
+    animation: deg90 20s linear infinite;
+}
+
+.deg180{
+    transform: rotate(-180deg) translate(130px) rotate(180deg);
+    animation: deg180 20s linear infinite;
+}
+
+.deg270{
+    transform: rotate(90deg) translate(130px) rotate(-90deg);
+    animation: deg270 20s linear infinite;
+}
+
+
+@keyframes deg0 {
+    from { transform: rotate(0deg) translateX(130px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(130px) rotate(-360deg); }
+}
+@keyframes deg90 {
+    from { transform: rotate(-90deg) translateX(130px) rotate(90deg); }
+    to { transform: rotate(270deg) translateX(130px) rotate(-270deg); }
+}
+@keyframes deg180 {
+    from { transform: rotate(-180deg) translateX(130px) rotate(180deg); }
+    to   { transform: rotate(180deg) translateX(130px) rotate(-180deg); }
+}
+@keyframes deg270 {
+    from { transform: rotate(90deg) translateX(130px) rotate(-90deg); }
+    to   { transform: rotate(450deg) translateX(130px) rotate(-450deg); }
+}
+
+/* third section */
+
+#third {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#third div{
+    text-align: center;
+    width: 100%;
+}
+
+#third img{
+    display: block;
+    margin: 40px auto;
+    width: 300px;
+    border-radius: 20px;
+}
+
+/* fourth section  */
+
+#fourth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#fourth div{
+    text-align: center;
+    width: 100%;
+}
+
+#fourth img{
+    display: block;
+    margin: 40px auto;
+    width: 200px;
+    border-radius: 20px;
+}
+
+
+.logIn-button {
+    width: 100px;
+    height: 40px;
+    color: white;
+    background: black;
+    border: none;
+    border-radius: 10px;
+    /* margin-top: 20px; */
+    font-size: 1rem;
+}
+
+.logIn-button:hover {
+    transform: scale(.9);
+}

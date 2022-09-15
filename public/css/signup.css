@@ -1,0 +1,118 @@
+/* main */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+main form {
+    background-color: black;
+    /* height: 600px; */
+    width: 380px;
+    border-radius: 20px;
+    text-align: center;
+    /* border: 2px solid white; */
+}
+
+/* form */
+
+form h3{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+form div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email {
+    margin-bottom: 20px;
+}
+
+form div + div {
+    flex-wrap: wrap;
+}
+
+form div + div > section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form .spacing {
+    margin-bottom: 20px;
+}
+
+
+label {
+    /* display: block; */
+    margin-left: 20px;
+    /* width: 40%; */
+    font-size: 1.3rem;
+    color: #25a7a2;
+    text-align: left;
+}
+
+input[type=email], input[type=password], input[type=text] {
+    /* width: 50%; */
+    padding: 12px 20px;
+    /* margin: 8px 0; */
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-right: 20px;
+}
+
+.logIn-button, .signUp-button {
+    width: 100px;
+    height: 40px;
+    color: white;
+    background: linear-gradient(to right, black, #25a7a2);
+    border: none;
+    border-radius: 10px;
+    /* margin-top: 20px; */
+    font-size: 1rem;
+}
+
+.lastBtn {
+    margin-bottom: 30px;
+}
+
+.encapBtn {
+    display: flex;
+    justify-content: right;
+}
+
+.lastBtn {
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.alert {
+    color: red;
+    width: 40%;
+}
+
+.userName {
+    margin-bottom: 20px;
+}
+
+.errors div{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.errors {
+    margin-top: 20px;
+}

@@ -1,0 +1,24 @@
+/* Titel */
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: 100px 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.centerQr {
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+}
+
+main div h1 {
+    margin-bottom: 30px;
+}

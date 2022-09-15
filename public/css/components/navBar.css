@@ -1,0 +1,136 @@
+nav {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    color: white;
+    background-color: black;
+    z-index: 999;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 30px;
+}
+
+.noRadius {
+  border-bottom-right-radius: 0;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+/* Menu Button */
+.menu {
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+  }
+  .line {
+    fill: none;
+    stroke: white;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+  }
+  .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  .opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+  }
+  .opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+
+.menu:hover *{
+  stroke: rgb(37, 167, 162);
+}
+
+/* Top Bar */
+
+#topBar {
+    height: 100px;
+    margin: auto 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#topBar:first-child {
+    padding-left: 15px;
+}
+
+#topBar > h2 {
+    font-size: 2rem;
+}
+
+/* Side bar */
+
+#sidebarMenu{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+    width: 200px;
+    /* height: 350px; */
+    transform: translateX(250px);
+    transition: transform 250ms ease-in-out;
+    background: black;
+    border-bottom-left-radius: 15px;
+}
+
+.sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.sidebarMenuInner li{
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.sidebarMenuInner li:hover{
+    color: rgb(37, 167, 162);
+}
+
+
+#sidebarMenu.show {
+    transform: translateX(0);
+}
+
+#dark.show {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  animation: darken .3s linear forwards;
+}
+
+@keyframes darken {
+  from { background: none; }
+  to { background: rgb(0,0,0, 40%);}
+}

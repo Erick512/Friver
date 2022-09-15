@@ -1,0 +1,151 @@
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+* {
+     color: white;
+}
+
+header{
+     width: 80%;
+     margin: auto;
+     display: flex;
+     clear: both;
+}
+
+section {
+     width: 80%;
+     margin: auto;
+}
+
+main {
+     /* height: 100%; */
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+/* Header */
+
+.heading {
+     width: 300px;
+     margin: auto;
+     margin-top: 30px;
+}
+
+.heading h2{
+     width: 100%;
+     text-align: center;
+}
+
+.editBtn {
+     position: relative;
+     bottom: 35px;
+     left: -30px;
+     font-size: 30px;
+}
+
+header > div {
+     display: flex;
+     margin: auto;
+     margin-top: 30px;
+     width: 300px;
+     flex-wrap: wrap;
+}
+
+header div > img {
+     display: block;
+     width: 80%;
+     margin: auto;
+     border-radius: 50%;
+     border: 3px solid rgb(0, 0, 0);
+}
+
+header div > h3{
+     text-align: center;
+     font-size: 2.5rem;
+     padding-top: 20px;
+     width: 100%;
+}
+
+/* Gigs List*/
+
+.gigs {
+     display: flex;
+     width: 100%;
+     margin: auto;
+     margin-top: 30px;
+     justify-content: center;
+}
+
+
+.gigs > ul {
+     width: 90%;
+     margin: auto;
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     /* margin-left: 10%;  */
+}
+
+.gigs > ul:last-child {
+     justify-content: left;
+}
+
+.gigs ul > li {
+     width: 50%;
+     padding-bottom: 10px;
+     font-size: 1rem;
+     width: 45%;
+     margin: 5px;
+     padding-left: 10%;
+     line-height: 25px;
+}
+
+.gigs li > i {
+     padding-right: 10px;
+     font-size: 1rem;
+     color: rgb(37, 167, 162);
+}
+   
+
+/* About me */
+
+.aboutMe{
+     display:flex;
+     flex-wrap: wrap;
+     width: 100%;
+     height: 230px;
+     margin: auto;
+     margin-top: 50px;
+     text-align: center;
+     align-items: center;
+     background-color: black;
+     /* border-radius: 50%; */
+}
+
+.aboutMe > h2 {
+     width: 100%;
+     padding-top: 20px;
+}
+
+.aboutMe > p {
+     margin: 0 auto;
+     margin-bottom: 10px;
+     font-size: 1.3rem;
+     width: 70%;
+     line-height: 30px;
+}
+
+
+/* contact */
+
+.contact{
+     display: block;
+     height: 200px;
+     width: 50%;
+     margin: auto;
+     margin-top: 50px;
+     text-align: center;
+}

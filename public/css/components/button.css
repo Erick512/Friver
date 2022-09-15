@@ -1,0 +1,10 @@
+.buttonTheme {
+    width: 100px;
+    height: 40px;
+    color: white;
+    background: linear-gradient(to right, black, #25a7a2);
+    border: none;
+    border-radius: 10px;
+    /* margin-top: 20px; */
+    font-size: 1rem;
+}
