@@ -4,7 +4,7 @@ const profileController = require('../controllers/userProfile')
 const { ensureAuth } = require('../middleware/auth')
 
 router.get('/', ensureAuth, profileController.getProfile)
-router.get('/:id', ensureAuth, profileController.getUserProfile)
+router.get('/:id', profileController.getUserProfile)
 router.post('/creatProfile', ensureAuth, profileController.createProfile)
 
 module.exports = router
