@@ -51,10 +51,28 @@
 
         <main>
 
-            <!-- skill form -->
 
-            <form action="/profile/creatProfile" method="POST">
-                <section class="skillsSection">
+            <form action="/profile/creatProfile" method="POST" enctype="multipart/form-data">
+
+
+                <section class="imageSection">
+                    <h3>Add your picture</h3>
+
+                    <img id="selectedImage" src="" alt="">
+
+
+                    <div class="container">
+                        <label for="imageUpload" class="image ">choose image</label>
+                        <input type="file" class="image" id="imageUpload" name="file">
+                    </div>
+
+                    <div class="nextBtn">
+                        <span><i class="fa-solid fa-arrow-right next nextSkills"></i></span>
+                    </div>
+
+                </section>
+
+                <section class="skillsSection hide">
                     <h3>Add Skills</h3>
 
                     <div class="container">
@@ -108,7 +126,7 @@
                         </div> 
                     </div>
 
-                    <button type="submit" class="buttonTheme complete">Complete profile</button>
+                    <button type="submit" value="Upload" class="buttonTheme complete">Complete profile</button>
                 </section>    
             </form>
 

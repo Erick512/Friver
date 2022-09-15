@@ -95,7 +95,6 @@ exports.postSignup = (req, res, next) => {
             console.log('error creating account')
             return next(err)
           }
-          console.log('profile created')
           res.redirect('/details')
         })
       })

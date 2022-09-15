@@ -9,6 +9,14 @@ const ProfileSchema = new mongoose.Schema({
         type: String,
         require: true
     },
+    image: {
+        type: String,
+        require: true,
+    },
+    cloudinaryId: {
+        type: String,
+        require: true,
+    },
     skills: [{
         type: String,
         require: false

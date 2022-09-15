@@ -42,23 +42,17 @@
             <div id="sidebarMenu">
                 <ul class="sidebarMenuInner">
                     <a href="/"><li>Home</li></a>
-                    <a href="/logout"><li>Log out</li></a>
+                    <a href="/login"><li>Sign In</li></a>
+                    <a href="/signup"><li>Sign Up</li></a>
                 </ul>
             </div>
         </nav>
 
         <main>
 
-            <% if(user.id == profile.userID) { %>
-            <div class="heading">
-                <h2>Profile Preview</h2>
-                <i class="fa-solid fa-pen-to-square editBtn"></i>
-            </div>
-            <%}%>
-
             <header>
                 <div>
-                    <img src="<%= profile.image %>" alt="Profile Picture">
+                    <img src="<%= profile.image %>"" alt="Profile Picture">
                     <h3><%= profile.userName %></h3>
                 </div>
             </header>
@@ -81,17 +75,8 @@
             <section class="contact">
                 <h2>Contact me for my services</h2>
 
-                <% if(profile.email) { %>
-                    <h3>Email: <a href="mailto:<%= profile.email %>"><%= profile.email %></a></h3>
-                <%}%>
-
-                <% if(profile.phoneNumber) { %>
-                    <h3>Number: <a href="tel:<%= profile.phoneNumber %>"><%= profile.phoneNumber %></a></h3>
-                <%}%>
-
-                <% if(profile.website) { %>
-                <h3>Website: <a href="<%= profile.website %>"><%= profile.website %></a></h3>
-                <%}%>
+                <h3>Work email: alonoserick@icloud.com</h3>
+                <h3>Website: erickalonso.com</h3>
             </section>
         </main>
 

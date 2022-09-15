@@ -46,6 +46,10 @@ main {
      font-size: 30px;
 }
 
+.editBtn:hover {
+     color: rgb(37, 167, 162);
+}
+
 header > div {
      display: flex;
      margin: auto;
@@ -56,7 +60,9 @@ header > div {
 
 header div > img {
      display: block;
-     width: 80%;
+     width: 300px;
+     height: 300px;
+     object-fit: cover;
      margin: auto;
      border-radius: 50%;
      border: 3px solid rgb(0, 0, 0);
@@ -143,9 +149,18 @@ header div > h3{
 
 .contact{
      display: block;
-     height: 200px;
-     width: 50%;
-     margin: auto;
-     margin-top: 50px;
-     text-align: center;
+     /* height: 200px; */
+     width: 380px;
+     text-align: left;
+     margin: 100px auto;
+}
+
+.contact h3 {
+     text-align: left;
+     margin: 30px 0;
+     font-size: 20px;
+     background-color: black;
+     padding: 20px;
+     border-radius: 10px;
+     color:rgb(37, 167, 162);
 }

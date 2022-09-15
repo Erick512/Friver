@@ -1,6 +1,16 @@
 document.querySelector('.skillBtn').addEventListener('click', addItem)
 document.querySelector('.nextDescription').addEventListener('click', showdescription)
 document.querySelector('.nextContact').addEventListener('click', showContact)
+document.querySelector('.nextSkills').addEventListener('click', showSkills)
+
+document.querySelector('#imageUpload').addEventListener('change', (event) => {
+    const [file] = document.querySelector('#imageUpload').files
+
+    if(file) {
+        document.querySelector('#selectedImage').src = URL.createObjectURL(file)
+        document.querySelector('#selectedImage').classList.add('active')
+    }
+})
 
 function addItem() {
 
@@ -15,6 +25,11 @@ function addItem() {
     list.appendChild(newChild)
 
     document.querySelector('.skillInput').value = ""
+}
+
+function showSkills() {
+    document.querySelector('.imageSection').classList.add('hide')
+    document.querySelector('.skillsSection').classList.remove('hide')
 }
 
 function showdescription() {

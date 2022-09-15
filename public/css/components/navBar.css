@@ -5,8 +5,8 @@ nav {
     color: white;
     background-color: black;
     z-index: 999;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 30px;
+    /* border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 30px; */
 }
 
 .noRadius {
@@ -88,7 +88,7 @@ nav a {
 #sidebarMenu{
     display: flex;
     justify-content: center;
-    position: fixed;
+    position: absolute;
     right: 0;
     width: 200px;
     /* height: 350px; */
