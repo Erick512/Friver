@@ -51,6 +51,6 @@ app.use((req, res, next) => {
       "<h1>Page not found on the server</h1>")
 })
  
-app.listen(process.env.PORT, ()=>{
+app.listen(process.env.PORT || 8000, ()=>{
     console.log('Server is running, you better catch it!')
 })    
