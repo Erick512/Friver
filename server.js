@@ -10,6 +10,9 @@ const connectDB = require('./config/database')
 const mainRoutes = require('./routes/main')
 const profileRoutes = require('./routes/profile')
 const qrCodeRoutes = require('./routes/qrCode')
+const cors = require('cors')
+
+App.use(cors())
 
 require('dotenv').config({path: './config/.env'})
 
