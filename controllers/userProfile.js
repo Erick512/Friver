@@ -23,7 +23,7 @@ module.exports = {
     },
     createProfile: async (req, res) => {
 
-        const url = `https://friver.netlify.app/profile/${req.user.id}`
+        const url = `https://friver.herokuapp.com/profile/${req.user.id}`
         const qrCodeGenerated = `https://api.qrserver.com/v1/create-qr-code/?data=${url}&amp;size=100x100`
     
         try {
