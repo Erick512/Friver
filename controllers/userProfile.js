@@ -38,7 +38,7 @@ module.exports = {
                 description: req.body.description,
                 email: req.body.email,
                 website: req.body.website,
-                phoneNumber: req.body.phoneNumber ,
+                phoneNumber: req.body.phoneNumber,
                 qrCode: qrCodeGenerated
             })
  
