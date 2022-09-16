@@ -36,6 +36,12 @@ body {
     /* background: linear-gradient(to right bottom , black 30%, #25a7a2) no-repeat; */
 }
 
+@supports (-webkit-touch-callout: none) {
+    body {
+        height: -webkit-fill-available;
+    }
+}
+
 main {
     position: relative;
     color: white;
