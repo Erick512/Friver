@@ -89,7 +89,7 @@ nav a {
     justify-content: center;
     position: absolute;
     right: 0;
-    width: 150px;
+    width: 130px;
     /* height: 350px; */
     transform: translateX(250px);
     transition: transform 250ms ease-in-out;
@@ -100,7 +100,7 @@ nav a {
 .sidebarMenuInner{
     margin:0;
     padding:0;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    /* border-top: 1px solid rgba(255, 255, 255, 0.3); */
 }
 .sidebarMenuInner li{
     list-style: none;
@@ -110,6 +110,10 @@ nav a {
     padding: 20px;
     cursor: pointer;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.sidebarMenuInner:last-child {
+  border: none;
 }
 
 .sidebarMenuInner li:hover{
