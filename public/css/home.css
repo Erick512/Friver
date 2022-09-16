@@ -4,18 +4,13 @@ main {
     width: 100vw;
     height: 100%;
     overflow-x: hidden;
-  -webkit-scroll-snap-type: y mandatory;
-      -ms-scroll-snap-type: y mandatory;
-          scroll-snap-type: y mandatory;
-          scroll-snap-type: mandatory;
 }
 
 main > section {
     display: flex;
     flex-flow: column;
-    height: 100%; 
+    height: 100vh; 
     margin: auto;
-    scroll-snap-align: start; 
 }
 
 section div + div {
@@ -224,12 +219,17 @@ h2 {
 
     main {
         overflow-x: hidden;
+        -webkit-scroll-snap-type: y mandatory;
+        -ms-scroll-snap-type: y mandatory;
+          scroll-snap-type: y mandatory;
+          scroll-snap-type: mandatory;
     }
 
     main > section {
         height: 100vh; 
         margin: auto;
         flex-flow: nowrap;
+        scroll-snap-align: start; 
     }
 
     main section > div {
