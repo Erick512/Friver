@@ -8,7 +8,6 @@ main {
       -ms-scroll-snap-type: y mandatory;
           scroll-snap-type: y mandatory;
           scroll-snap-type: mandatory;
-    /* overflow-x: hidden; */
 }
 
 main > section {
@@ -17,7 +16,10 @@ main > section {
     height: 100vh; 
     margin: auto;
     scroll-snap-align: start; 
-    /* scroll-snap-stop: normal;  */
+}
+
+section div + div {
+   margin-bottom: 50px;
 }
 
 main > section > div {
@@ -215,7 +217,6 @@ h2 {
 .logIn-button:hover {
     transform: scale(.9);
 }
-
 
 @media (min-width: 700px) {
 
