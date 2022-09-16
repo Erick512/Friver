@@ -1,12 +1,11 @@
 nav {
-    position: relative;
-    height: 100px;
+    position: fixed;
+    height: 70px;
     width: 100%;
     color: white;
+    /* background-color: rgba(83, 83, 83, 0.387); */
     background-color: black;
     z-index: 999;
-    /* border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 30px; */
 }
 
 .noRadius {
@@ -19,7 +18,7 @@ nav a {
 
 /* Menu Button */
 .menu {
-    width: 50px;
+    width: 40px;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -68,7 +67,7 @@ nav a {
 /* Top Bar */
 
 #topBar {
-    height: 100px;
+    height: 100%;
     margin: auto 20px;
     display: flex;
     justify-content: space-between;
@@ -90,7 +89,7 @@ nav a {
     justify-content: center;
     position: absolute;
     right: 0;
-    width: 200px;
+    width: 150px;
     /* height: 350px; */
     transform: translateX(250px);
     transition: transform 250ms ease-in-out;
@@ -133,4 +132,14 @@ nav a {
 @keyframes darken {
   from { background: none; }
   to { background: rgb(0,0,0, 40%);}
+}
+
+@media (min-width: 700px) {
+
+  #sidebarMenu {
+
+    width: 200px;
+
+  }
+  
 }

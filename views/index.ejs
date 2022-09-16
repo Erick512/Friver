@@ -27,32 +27,32 @@
 
     <!-- <div id="dark"></div> -->
 
-        <!-- Nav -->
-    <nav>
-        <div id="topBar">
-            <i>Logo</i>
-            <h2>Friver</h2>
-            <div>
-                <button class="menu"  aria-label="Main Menu">
-                    <svg width="100" height="100" viewBox="0 0 100 100">
-                        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-                        <path class="line line2" d="M 20,50 H 80" />
-                        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <div id="sidebarMenu">
-            <ul class="sidebarMenuInner">
-                <a href="/"><li>Home</li></a>
-                <a href="/login"><li>Sign In</li></a>
-                <a href="/signup"><li>Sign Up</li></a>
-            </ul>
-        </div>
-    </nav>
-
     <!-- main -->
     <main>
+
+            <!-- Nav -->
+        <nav>
+            <div id="topBar">
+                <i>Logo</i>
+                <h2>Friver</h2>
+                <div>
+                    <button class="menu"  aria-label="Main Menu">
+                        <svg width="100" height="100" viewBox="0 0 100 100">
+                            <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                            <path class="line line2" d="M 20,50 H 80" />
+                            <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="sidebarMenu">
+                <ul class="sidebarMenuInner">
+                    <a href="/"><li>Home</li></a>
+                    <a href="/login"><li>Sign In</li></a>
+                    <a href="/signup"><li>Sign Up</li></a>
+                </ul>
+            </div>
+        </nav>
 
         <!-- intro section -->
         <section id="first">
@@ -60,15 +60,15 @@
                 <h1>Welcome to Friver for rideshare <span class="slide-right">drivers.</span><br>Where passengers contract you.</h1>
                 <!-- <button class="getStarted">Get Started</button> -->
             </div>
-            <div>
-                <img src="images/Driver-8.png" alt="Two people shaking hands">
-            </div>
+            <!-- <div id="half">
+                <img id="firstImage" src="images/Driver-8.png" alt="Two people shaking hands">
+            </div> -->
         </section>
 
         <!-- skills section -->
         <section id="second">
 
-            <div>
+            <div id="half">
                 <ul>
                     <li class="fa-solid fa-car"></li>
                     <li class="fa-solid fa-camera deg0"></li>
@@ -77,7 +77,7 @@
                     <li class="fa-solid fa-code deg270"></li>            
                 </ul>
             </div>
-            <div>
+            <div id="half">
                 <!-- <h2>If you have another skill, thats another way to add to your income. Friver will help you get thos skills out there for passengers to see.</h2> -->
                 <h2>Friver is a platform that helps ridshare drivers showcase their other <span>skills<span>.</h2>
             </div>
@@ -86,10 +86,10 @@
         <!-- <div class="divider"></div> -->
 
         <section id="third">
-            <div>
+            <div id="half">
                 <img src="images/profile.png" alt="">
             </div>
-            <div>
+            <div id="half">
                 <h2>Create a <span>profile</span> that will show those skills to passengers.</h2>
             </div>
         </section>
@@ -97,13 +97,13 @@
         <!-- <div class="divider"></div> -->
 
         <section id="fourth">
-            <div>
+            <div id="half">
                 <img src="https://api.qrserver.com/v1/create-qr-code/?data=$example&amp;size=200x200" alt="QR code">
             </div>
-            <div>
+            <div id="half">
                 <h2>Get a personal <span>QR code</span> that will direct passengers straight to your profile when they scan it.</h2>
+                <a href="/login"><button class="logIn-button">Sign Up</button></a>
             </div>
-            <a href="/login"><button class="logIn-button">Sign UP</button></a>
         </section>
     </main>
 

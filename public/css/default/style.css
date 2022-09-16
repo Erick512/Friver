@@ -31,11 +31,14 @@ body {
     height: 100%;
     overflow: auto;
     overflow-x: hidden;
-    background: linear-gradient(to right bottom , black 30%, #25a7a2) no-repeat;
+    /* background: url('/images/background2.jpg'); */
+    background: black;
+    /* background: linear-gradient(to right bottom , black 30%, #25a7a2) no-repeat; */
 }
 
 main {
     position: relative;
+    min-height: 100%;
     color: white;
 }
 
@@ -50,10 +53,11 @@ h1{
 footer {
     display: flex;
     width: 100%;
-    height: 100px;
+    height: 70px;
     background-color: black;
     color: white;
     justify-content: center;
     align-items: center;
     font-size: .8rem;
+    z-index: 99999;
 }
