@@ -3,20 +3,21 @@
 main {
     width: 100vw;
     height: 100vh;
-    overflow: auto;
+    overflow-x: hidden;
   -webkit-scroll-snap-type: y mandatory;
       -ms-scroll-snap-type: y mandatory;
-          scroll-snap-type: y mandatory;
+          /* scroll-snap-type: y mandatory; */
+          /* scroll-snap-type: mandatory; */
     /* overflow-x: hidden; */
 }
 
 main > section {
-    display: flex;
-    flex-flow: column;
+    /* display: flex;
+    flex-flow: column; */
     height: 100vh; 
     margin: auto;
-    scroll-snap-align: start;
-    scroll-snap-stop: normal;
+    /* scroll-snap-align: start;
+    scroll-snap-stop: normal; */
 }
 
 main > section > div {
