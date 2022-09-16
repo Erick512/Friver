@@ -9,7 +9,12 @@ main {
 
 main > section {
     height: 100vh;
+    margin: auto;
     /* scroll-snap-align: start; */
+}
+
+main > section:first-of-type {
+    height: 550px;
 }
 
 #first span {
@@ -28,15 +33,20 @@ section span {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
 }
 
 #first h1 {
     font-size: 2.3em;
 }
 
+#first div + div {
+    display: flex;
+    justify-content: center;
+}
+
 #first img {
-    width: 230px;
+    width: 200px;
 }
 
 /* second section */
@@ -165,4 +175,25 @@ section span {
 
 .logIn-button:hover {
     transform: scale(.9);
+}
+
+@media (min-width: 700px) {
+
+    main > section {
+        height: 100vh;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* scroll-snap-align: start; */
+    }
+    main > section > div{
+        width: 50% !important;
+    };
+
+    main > section > div > img {
+        display: block;
+        width: 100%;
+    };
 }
