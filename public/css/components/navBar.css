@@ -60,9 +60,9 @@ nav a {
     stroke-width: 6;
   }
 
-.menu:hover *{
+/* .menu:hover *{
   stroke: rgb(37, 167, 162);
-}
+} */
 
 /* Top Bar */
 
@@ -144,6 +144,10 @@ nav a {
 
     width: 200px;
 
+  }
+
+  .menu:hover *{
+    stroke: rgb(37, 167, 162);
   }
   
 }

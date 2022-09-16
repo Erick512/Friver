@@ -32,6 +32,7 @@ section span {
 
 h2 {
     font-size: 25px;
+    text-align: center;
 }
 
 /* first section */
@@ -178,7 +179,7 @@ h2 {
 }
 
 #fourth h2 {
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 #fourth img{
@@ -188,10 +189,15 @@ h2 {
     margin-top: 100px;
 }
 
+.signUpBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+}
 
 .logIn-button {
-    margin-top: 30px;
-    margin-left: 60%; 
     width: 140px;
     height: 45px;
     font-family: 'Roboto', sans-serif;
@@ -236,6 +242,14 @@ h2 {
         line-height: 60px;
     }
 
+
+    section div + div {
+        margin-bottom: 0;
+    }
+
+    #half {
+        width: 50%;
+    }
 
     #first span {
         /* color:#25a7a2; */
@@ -290,9 +304,9 @@ h2 {
         text-align: left;
     }
 
-    #second div + div {
-        width: 80%;
-    }
+    /* #second div + div {
+        width: 50%;
+    } */
 
     #second ul {
         display: flex;
@@ -366,15 +380,15 @@ h2 {
         align-items: center;
         flex-flow: nowrap;
     }
-
-    #third #half {
-        width: 50%;
-    }
     
     #third div + div h2 {
         text-align: left;
-        width: 90%;
-        margin: 0 auto;
+        /* width: 90%; */
+        /* margin: 0 auto; */
+    }
+
+    #third div + div {
+        width: 50%;
     }
 
     #third h2 {
@@ -402,7 +416,7 @@ h2 {
     
     #fourth #half{
         text-align: left;
-        width: 90%;
+        width: 80%;
     }
     
     #fourth h2 {
