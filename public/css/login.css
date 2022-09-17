@@ -9,6 +9,10 @@ main {
     height: 100%;
 }
 
+nav {
+    position: relative;
+}
+
 main form {
     background-color: black;
     color:  #56ba9d;
