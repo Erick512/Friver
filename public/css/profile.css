@@ -18,6 +18,10 @@ section {
      margin: auto;
 }
 
+nav {
+     position: relative;
+}
+
 main {
      /* height: 100%; */
 }
@@ -47,7 +51,7 @@ main {
 }
 
 .editBtn:hover {
-     color: rgb(37, 167, 162);
+     color: #56ba9d;
 }
 
 header > div {
@@ -112,7 +116,7 @@ header div > h3{
 .gigs li > i {
      padding-right: 10px;
      font-size: 1rem;
-     color: rgb(37, 167, 162);
+     color: #56ba9d;
 }
    
 
@@ -127,13 +131,14 @@ header div > h3{
      margin-top: 50px;
      text-align: center;
      align-items: center;
-     background-color: black;
+     background-color: white;
      /* border-radius: 50%; */
 }
 
 .aboutMe > h2 {
      width: 100%;
      padding-top: 20px;
+     color: black;
 }
 
 .aboutMe > p {
@@ -142,6 +147,7 @@ header div > h3{
      font-size: 1.3rem;
      width: 70%;
      line-height: 30px;
+     color: black;
 }
 
 
@@ -159,8 +165,14 @@ header div > h3{
      text-align: left;
      margin: 30px 0;
      font-size: 20px;
-     background-color: black;
+     background-color: white;
      padding: 20px;
      border-radius: 10px;
-     color:rgb(37, 167, 162);
+     color: black;
+}
+
+.contact a {
+     color: black;
+     text-decoration: none;
+     border-bottom:1px solid #56ba9d;
 }

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>Document</title>
     </head>
 
@@ -74,20 +74,25 @@
                     <% } %>
                 </div>
 
-                <input type="submit" class="logIn-button" value="Log In">
+                <div id="btnSolo">
+                    <button type="submit" class="logIn-button">Log in</button>
+                </div>
 
-                <div class="divider"></div>
+                <!-- <div class="divider"></div>
 
                 <button class="logIn-button media uber">Log in with Uber</button>
-                <button class="logIn-button media lyft">Log in with Lyft</button>
+                <button class="logIn-button media lyft">Log in with Lyft</button> -->
 
                 <div class="divider"></div>
 
-                <a href="/signup"><button form class="signUp-button lastBtn">Sign Up</button></a>
+                <div id="btns">
+                    <h4>Don't have an account?</h4>
+                    <a href="/signup"><button form class="signUp-button lastBtn">Sign Up</button></a>
+                </div>
             </form>
         </main>
 
-        <% if (locals.messages.errors) { %>
+        <!-- <% if (locals.messages.errors) { %>
             <% messages.errors.forEach( el => { %>
                 <div class="alert alert-danger"><%= el.msg %></div>
             <% }) %>    
@@ -96,6 +101,6 @@
             <% messages.info.forEach( el => { %>
                 <div class="alert alert-danger"><%= el.msg %></div>
             <% }) %>    
-        <% } %>
+        <% } %> -->
         
 <%- include('partials/footer') -%>

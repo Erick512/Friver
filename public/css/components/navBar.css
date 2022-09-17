@@ -6,6 +6,8 @@ nav {
     /* background-color: rgba(83, 83, 83, 0.387); */
     background-color: black;
     z-index: 999;
+    border-bottom: 1px solid rgb(255, 255, 255, .3);
+
 }
 
 .noRadius {
@@ -95,7 +97,10 @@ nav a {
     transition: transform 250ms ease-in-out;
     background: black;
     border-bottom-left-radius: 15px;
+    border-left: 1px solid rgb(255, 255, 255, .5);
+    border-bottom: 1px solid rgb(255, 255, 255, .3);
 }
+
 
 .sidebarMenuInner{
     margin:0;
