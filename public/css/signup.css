@@ -1,9 +1,22 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* main */
 
 main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 100%;
 }
 
@@ -15,7 +28,8 @@ main form {
     text-align: center;
     /* border: 2px solid white; */
     border: 1px solid rgb(255, 255, 255, .5);
-    box-shadow: 10px 10px 5px 0px rgb(154, 153, 153);
+    -webkit-box-shadow: 10px 10px 5px 0px rgb(154, 153, 153);
+            box-shadow: 10px 10px 5px 0px rgb(154, 153, 153);
 }
 
 nav {
@@ -25,18 +39,30 @@ nav {
 /* form */
 
 form h3{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 100px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 1.5rem;
     text-align: center;
 }
 
 form div{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .email {
@@ -44,14 +70,21 @@ form div{
 }
 
 form div + div {
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 form div + div > section {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 form .spacing {
@@ -75,7 +108,8 @@ input[type=email], input[type=password], input[type=text] {
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 10px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin-right: 20px;
 }
 
@@ -91,7 +125,10 @@ input[type=email], input[type=password], input[type=text] {
     background-color: #fff;
     border: none;
     border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
@@ -99,7 +136,11 @@ input[type=email], input[type=password], input[type=text] {
 
 .logIn-button:hover {
 
-    transform: scale(.9);
+    -webkit-transform: scale(.9);
+
+        -ms-transform: scale(.9);
+
+            transform: scale(.9);
 }
 
 
@@ -108,8 +149,12 @@ input[type=email], input[type=password], input[type=text] {
 }
 
 .encapBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: right;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
 }
 
 .lastBtn {

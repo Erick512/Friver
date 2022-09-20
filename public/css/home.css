@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* main */
 
 main {
@@ -7,8 +14,13 @@ main {
 }
 
 main > section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
     height: 100vh; 
     margin: auto;
 }
@@ -38,9 +50,17 @@ h2 {
 /* first section */
 
 #first {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, .9))), url('/images/driverBackground.jpg');
+    background: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .9)), url('/images/driverBackground.jpg');
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .9)), url('/images/driverBackground.jpg');
     background-size: cover;
     background-attachment: static;
@@ -73,9 +93,15 @@ h2 {
 }
 
 #second ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 250px;
     height: 250px;
     border-radius: 50%;
@@ -98,54 +124,94 @@ h2 {
 }
 
 #second > ul {
-    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
 }
 
 .deg0 {
-    transform: translate(130px);
-    animation: deg0 20s linear infinite;
+    -webkit-transform: translate(130px);
+        -ms-transform: translate(130px);
+            transform: translate(130px);
+    -webkit-animation: deg0 20s linear infinite;
+            animation: deg0 20s linear infinite;
 }
 
 .deg90 {
-    transform: rotate(-90deg) translate(130px) rotate(90deg);
-    animation: deg90 20s linear infinite;
+    -webkit-transform: rotate(-90deg) translate(130px) rotate(90deg);
+        -ms-transform: rotate(-90deg) translate(130px) rotate(90deg);
+            transform: rotate(-90deg) translate(130px) rotate(90deg);
+    -webkit-animation: deg90 20s linear infinite;
+            animation: deg90 20s linear infinite;
 }
 
 .deg180{
-    transform: rotate(-180deg) translate(130px) rotate(180deg);
-    animation: deg180 20s linear infinite;
+    -webkit-transform: rotate(-180deg) translate(130px) rotate(180deg);
+        -ms-transform: rotate(-180deg) translate(130px) rotate(180deg);
+            transform: rotate(-180deg) translate(130px) rotate(180deg);
+    -webkit-animation: deg180 20s linear infinite;
+            animation: deg180 20s linear infinite;
 }
 
 .deg270{
-    transform: rotate(90deg) translate(130px) rotate(-90deg);
-    animation: deg270 20s linear infinite;
+    -webkit-transform: rotate(90deg) translate(130px) rotate(-90deg);
+        -ms-transform: rotate(90deg) translate(130px) rotate(-90deg);
+            transform: rotate(90deg) translate(130px) rotate(-90deg);
+    -webkit-animation: deg270 20s linear infinite;
+            animation: deg270 20s linear infinite;
+}
+
+
+@-webkit-keyframes deg0 {
+    from { -webkit-transform: rotate(0deg) translateX(130px) rotate(0deg); transform: rotate(0deg) translateX(130px) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateX(130px) rotate(-360deg); transform: rotate(360deg) translateX(130px) rotate(-360deg); }
 }
 
 
 @keyframes deg0 {
-    from { transform: rotate(0deg) translateX(130px) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(130px) rotate(-360deg); }
+    from { -webkit-transform: rotate(0deg) translateX(130px) rotate(0deg); transform: rotate(0deg) translateX(130px) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateX(130px) rotate(-360deg); transform: rotate(360deg) translateX(130px) rotate(-360deg); }
+}
+@-webkit-keyframes deg90 {
+    from { -webkit-transform: rotate(-90deg) translateX(130px) rotate(90deg); transform: rotate(-90deg) translateX(130px) rotate(90deg); }
+    to { -webkit-transform: rotate(270deg) translateX(130px) rotate(-270deg); transform: rotate(270deg) translateX(130px) rotate(-270deg); }
 }
 @keyframes deg90 {
-    from { transform: rotate(-90deg) translateX(130px) rotate(90deg); }
-    to { transform: rotate(270deg) translateX(130px) rotate(-270deg); }
+    from { -webkit-transform: rotate(-90deg) translateX(130px) rotate(90deg); transform: rotate(-90deg) translateX(130px) rotate(90deg); }
+    to { -webkit-transform: rotate(270deg) translateX(130px) rotate(-270deg); transform: rotate(270deg) translateX(130px) rotate(-270deg); }
+}
+@-webkit-keyframes deg180 {
+    from { -webkit-transform: rotate(-180deg) translateX(130px) rotate(180deg); transform: rotate(-180deg) translateX(130px) rotate(180deg); }
+    to   { -webkit-transform: rotate(180deg) translateX(130px) rotate(-180deg); transform: rotate(180deg) translateX(130px) rotate(-180deg); }
 }
 @keyframes deg180 {
-    from { transform: rotate(-180deg) translateX(130px) rotate(180deg); }
-    to   { transform: rotate(180deg) translateX(130px) rotate(-180deg); }
+    from { -webkit-transform: rotate(-180deg) translateX(130px) rotate(180deg); transform: rotate(-180deg) translateX(130px) rotate(180deg); }
+    to   { -webkit-transform: rotate(180deg) translateX(130px) rotate(-180deg); transform: rotate(180deg) translateX(130px) rotate(-180deg); }
+}
+@-webkit-keyframes deg270 {
+    from { -webkit-transform: rotate(90deg) translateX(130px) rotate(-90deg); transform: rotate(90deg) translateX(130px) rotate(-90deg); }
+    to   { -webkit-transform: rotate(450deg) translateX(130px) rotate(-450deg); transform: rotate(450deg) translateX(130px) rotate(-450deg); }
 }
 @keyframes deg270 {
-    from { transform: rotate(90deg) translateX(130px) rotate(-90deg); }
-    to   { transform: rotate(450deg) translateX(130px) rotate(-450deg); }
+    from { -webkit-transform: rotate(90deg) translateX(130px) rotate(-90deg); transform: rotate(90deg) translateX(130px) rotate(-90deg); }
+    to   { -webkit-transform: rotate(450deg) translateX(130px) rotate(-450deg); transform: rotate(450deg) translateX(130px) rotate(-450deg); }
 }
 
 /* third section */
 
 #third {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
 }
 
 #third div + div{
@@ -167,10 +233,19 @@ h2 {
 /* fourth section  */
 
 #fourth {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
 }
 
 #fourth div{
@@ -190,9 +265,15 @@ h2 {
 }
 
 .signUpBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: auto;
     margin-top: 50px;
 }
@@ -209,14 +290,19 @@ h2 {
     background-color: #fff;
     border: none;
     border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
 }
 
 .logIn-button:hover {
-    transform: scale(.9);
+    -webkit-transform: scale(.9);
+        -ms-transform: scale(.9);
+            transform: scale(.9);
 }
 
 @media (min-width: 700px) {
@@ -225,16 +311,17 @@ h2 {
 
     main {
         overflow-x: hidden;
-        -webkit-scroll-snap-type: y mandatory;
         -ms-scroll-snap-type: y mandatory;
-          scroll-snap-type: y mandatory;
-          scroll-snap-type: mandatory;
+        scroll-snap-type: y mandatory;
+          -ms-scroll-snap-type: mandatory;
+              scroll-snap-type: mandatory;
     }
 
     main > section {
         height: 100vh; 
         margin: auto;
-        flex-flow: nowrap;
+        -ms-flex-flow: nowrap;
+            flex-flow: nowrap;
         scroll-snap-align: start; 
     }
 
@@ -245,6 +332,7 @@ h2 {
 
     section div + div {
         margin-bottom: 0;
+        padding-right: 40px;
     }
 
     #half {
@@ -264,9 +352,17 @@ h2 {
     /* first section */
 
     #first {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: right;
-        align-items: center;
+        -webkit-box-pack: right;
+            -ms-flex-pack: right;
+                justify-content: right;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, .9))) ,url('/images/driverBackground.jpg');
+        background: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .9)) ,url('/images/driverBackground.jpg');
         background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .9)) ,url('/images/driverBackground.jpg');
         background-size: cover;
         background-attachment: static;
@@ -292,26 +388,35 @@ h2 {
     /* second section */
 
     #second {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         width: 90%;
     }
 
     #second h2 {
         font-size: 2.5rem;
-    }
-
-    #second > div {
         text-align: left;
     }
+
+    /* #second > div {
+        text-align: center;
+    } */
 
     /* #second div + div {
         width: 50%;
     } */
 
     #second ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         width: 300px;
         height: 300px;
         border-radius: 50%;
@@ -331,54 +436,92 @@ h2 {
     }
 
     #second > ul {
-        animation-play-state: paused;
+        -webkit-animation-play-state: paused;
+                animation-play-state: paused;
     }
 
     .deg0 {
-        transform: translate(130px);
-        animation: deg0 20s linear infinite;
+        -webkit-transform: translate(130px);
+            -ms-transform: translate(130px);
+                transform: translate(130px);
+        -webkit-animation: deg0 20s linear infinite;
+                animation: deg0 20s linear infinite;
     }
 
     .deg90 {
-        transform: rotate(-90deg) translate(130px) rotate(90deg);
-        animation: deg90 20s linear infinite;
+        -webkit-transform: rotate(-90deg) translate(130px) rotate(90deg);
+            -ms-transform: rotate(-90deg) translate(130px) rotate(90deg);
+                transform: rotate(-90deg) translate(130px) rotate(90deg);
+        -webkit-animation: deg90 20s linear infinite;
+                animation: deg90 20s linear infinite;
     }
 
     .deg180{
-        transform: rotate(-180deg) translate(130px) rotate(180deg);
-        animation: deg180 20s linear infinite;
+        -webkit-transform: rotate(-180deg) translate(130px) rotate(180deg);
+            -ms-transform: rotate(-180deg) translate(130px) rotate(180deg);
+                transform: rotate(-180deg) translate(130px) rotate(180deg);
+        -webkit-animation: deg180 20s linear infinite;
+                animation: deg180 20s linear infinite;
     }
 
     .deg270{
-        transform: rotate(90deg) translate(130px) rotate(-90deg);
-        animation: deg270 20s linear infinite;
+        -webkit-transform: rotate(90deg) translate(130px) rotate(-90deg);
+            -ms-transform: rotate(90deg) translate(130px) rotate(-90deg);
+                transform: rotate(90deg) translate(130px) rotate(-90deg);
+        -webkit-animation: deg270 20s linear infinite;
+                animation: deg270 20s linear infinite;
+    }
+
+
+    @-webkit-keyframes deg0 {
+        from { -webkit-transform: rotate(0deg) translateX(130px) rotate(0deg); transform: rotate(0deg) translateX(130px) rotate(0deg); }
+        to   { -webkit-transform: rotate(360deg) translateX(130px) rotate(-360deg); transform: rotate(360deg) translateX(130px) rotate(-360deg); }
     }
 
 
     @keyframes deg0 {
-        from { transform: rotate(0deg) translateX(130px) rotate(0deg); }
-        to   { transform: rotate(360deg) translateX(130px) rotate(-360deg); }
+        from { -webkit-transform: rotate(0deg) translateX(130px) rotate(0deg); transform: rotate(0deg) translateX(130px) rotate(0deg); }
+        to   { -webkit-transform: rotate(360deg) translateX(130px) rotate(-360deg); transform: rotate(360deg) translateX(130px) rotate(-360deg); }
+    }
+    @-webkit-keyframes deg90 {
+        from { -webkit-transform: rotate(-90deg) translateX(130px) rotate(90deg); transform: rotate(-90deg) translateX(130px) rotate(90deg); }
+        to { -webkit-transform: rotate(270deg) translateX(130px) rotate(-270deg); transform: rotate(270deg) translateX(130px) rotate(-270deg); }
     }
     @keyframes deg90 {
-        from { transform: rotate(-90deg) translateX(130px) rotate(90deg); }
-        to { transform: rotate(270deg) translateX(130px) rotate(-270deg); }
+        from { -webkit-transform: rotate(-90deg) translateX(130px) rotate(90deg); transform: rotate(-90deg) translateX(130px) rotate(90deg); }
+        to { -webkit-transform: rotate(270deg) translateX(130px) rotate(-270deg); transform: rotate(270deg) translateX(130px) rotate(-270deg); }
+    }
+    @-webkit-keyframes deg180 {
+        from { -webkit-transform: rotate(-180deg) translateX(130px) rotate(180deg); transform: rotate(-180deg) translateX(130px) rotate(180deg); }
+        to   { -webkit-transform: rotate(180deg) translateX(130px) rotate(-180deg); transform: rotate(180deg) translateX(130px) rotate(-180deg); }
     }
     @keyframes deg180 {
-        from { transform: rotate(-180deg) translateX(130px) rotate(180deg); }
-        to   { transform: rotate(180deg) translateX(130px) rotate(-180deg); }
+        from { -webkit-transform: rotate(-180deg) translateX(130px) rotate(180deg); transform: rotate(-180deg) translateX(130px) rotate(180deg); }
+        to   { -webkit-transform: rotate(180deg) translateX(130px) rotate(-180deg); transform: rotate(180deg) translateX(130px) rotate(-180deg); }
+    }
+    @-webkit-keyframes deg270 {
+        from { -webkit-transform: rotate(90deg) translateX(130px) rotate(-90deg); transform: rotate(90deg) translateX(130px) rotate(-90deg); }
+        to   { -webkit-transform: rotate(450deg) translateX(130px) rotate(-450deg); transform: rotate(450deg) translateX(130px) rotate(-450deg); }
     }
     @keyframes deg270 {
-        from { transform: rotate(90deg) translateX(130px) rotate(-90deg); }
-        to   { transform: rotate(450deg) translateX(130px) rotate(-450deg); }
+        from { -webkit-transform: rotate(90deg) translateX(130px) rotate(-90deg); transform: rotate(90deg) translateX(130px) rotate(-90deg); }
+        to   { -webkit-transform: rotate(450deg) translateX(130px) rotate(-450deg); transform: rotate(450deg) translateX(130px) rotate(-450deg); }
     }
 
     /* third section */
 
     #third {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-flow: nowrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-flow: nowrap;
+            flex-flow: nowrap;
     }
     
     #third div + div h2 {
@@ -408,10 +551,17 @@ h2 {
     /* fourth section  */
 
     #fourth {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-flow: nowrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-flow: nowrap;
+            flex-flow: nowrap;
     }
     
     #fourth #half{
@@ -422,6 +572,7 @@ h2 {
     #fourth h2 {
         margin-top: 0;
         font-size: 2rem;
+        text-align: left;
     }
     
     #fourth img{
@@ -445,7 +596,10 @@ h2 {
         background-color: #fff;
         border: none;
         border-radius: 45px;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        -webkit-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
         transition: all 0.3s ease 0s;
         cursor: pointer;
         outline: none;
@@ -453,10 +607,27 @@ h2 {
 
     .logIn-button:hover {
         background-color: #2EE59D;
-        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        -webkit-box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+                box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
         color: #fff;
-        transform: translateY(-7px);
+        -webkit-transform: translateY(-7px);
+            -ms-transform: translateY(-7px);
+                transform: translateY(-7px);
       }
+
+      .signUpBtn {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: left;
+            -ms-flex-pack: left;
+                justify-content: left;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        margin-left: 0;
+        margin-top: 20px;
+    }
 
     /* .logIn-button:hover {
         box-shadow: 0px 0px 4px -1px #326b5b;;

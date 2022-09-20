@@ -1,11 +1,24 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 body {
     height: 100vh;
 }
 
 main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 100%;
 }
 
@@ -22,23 +35,36 @@ main form {
     text-align: center;
     /* border: 2px solid white; */
     border: 1px solid rgb(255, 255, 255, .5);
-    box-shadow: 10px 10px 5px 0px rgb(154, 153, 153);
+    -webkit-box-shadow: 10px 10px 5px 0px rgb(154, 153, 153);
+            box-shadow: 10px 10px 5px 0px rgb(154, 153, 153);
 }
 
 form h3{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 100px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 1.5rem;
     text-align: center;
     color: white;
 }
 
 form div{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 90%;
     margin: auto;
 }
@@ -48,13 +74,18 @@ form h3 + div{
 }
 
 form div + div {
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 form div + div > section {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 form .spacing {
@@ -76,7 +107,8 @@ input[type=email], input[type=password] {
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 10px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     /* margin-right: 20px; */
     background-color: white;
     color: black;
@@ -101,19 +133,28 @@ input[type=email], input[type=password] {
     background-color: #fff;
     border: none;
     border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
 }
 
 .logIn-button:hover, .signUp-button:hover {
-    transform: scale(.9);
+    -webkit-transform: scale(.9);
+        -ms-transform: scale(.9);
+            transform: scale(.9);
 }
 
 .logIn-erros {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .media {
@@ -123,12 +164,16 @@ input[type=email], input[type=password] {
 }
 
 .media.uber {
+    background: -webkit-gradient(linear, left top, right top, from(black), to(rgb(175, 175, 175)));
+    background: -o-linear-gradient(left, black, rgb(175, 175, 175));
     background: linear-gradient(to right, black, rgb(175, 175, 175));
     margin-bottom: 20px;
 }
 
 
 .media.lyft {
+    background: -webkit-gradient(linear, left top, right top, from(black), to(#FF00BF));
+    background: -o-linear-gradient(left, black, #FF00BF);
     background: linear-gradient(to right, black, #FF00BF);
 }
 
@@ -149,13 +194,21 @@ input[type=email], input[type=password] {
 }
 
 div#btnSolo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-right: 20px;
-    justify-content: right;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
 }
 
 div#btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 20px;
 }

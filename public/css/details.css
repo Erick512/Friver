@@ -1,11 +1,24 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 nav {
     position: relative;
 }
 
 main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 100%;
     /* flex-wrap: wrap; TEMP */
 }
@@ -27,14 +40,21 @@ main form > section{
     text-align: center;
     /* border: 2px solid white; */
     border: 1px solid rgb(255, 255, 255, .5);
-    box-shadow: 10px 10px 5px 0px rgb(154, 153, 153);
+    -webkit-box-shadow: 10px 10px 5px 0px rgb(154, 153, 153);
+            box-shadow: 10px 10px 5px 0px rgb(154, 153, 153);
 }
 
 form h3{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 100px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 1.5rem;
     text-align: center;
 }
@@ -46,7 +66,8 @@ input[type=email], input[type=password], input[type=text], input[type=number], i
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 10px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin-right: 20px;
 }
 
@@ -90,21 +111,36 @@ label {
 }
 
 .inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .inner.btn{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: right;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
     margin: 20px 20px 0 0;
 }
 
 .skillsList {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 90%;
     margin: 20px auto; 
     background-color: black;
@@ -114,9 +150,15 @@ label {
 }
 
 .skillsList i {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: left;
-    align-items: center;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: left;
     width: 150px;
     height: 50px;
@@ -136,14 +178,22 @@ label {
 
 .next:hover {
     color: #56ba9d;
-    transform: scale(.9);
+    -webkit-transform: scale(.9);
+        -ms-transform: scale(.9);
+            transform: scale(.9);
 }
 
 section div.nextBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: right;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
     width: 95%;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 20px;
 }
 
@@ -179,9 +229,13 @@ i:hover {
 }
 
 .complete:hover {
-    transform: scale(.9);
+    -webkit-transform: scale(.9);
+        -ms-transform: scale(.9);
+            transform: scale(.9);
 }
 
 button:hover {
-    transform: scale(.9);
+    -webkit-transform: scale(.9);
+        -ms-transform: scale(.9);
+            transform: scale(.9);
 }
