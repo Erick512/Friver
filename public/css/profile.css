@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /******************************************
 /* LAYOUT
 /*******************************************/
@@ -9,6 +16,8 @@
 header{
      width: 80%;
      margin: auto;
+     display: -webkit-box;
+     display: -ms-flexbox;
      display: flex;
      clear: both;
 }
@@ -55,18 +64,22 @@ main {
 }
 
 header > div {
+     display: -webkit-box;
+     display: -ms-flexbox;
      display: flex;
      margin: auto;
      margin-top: 30px;
      width: 300px;
-     flex-wrap: wrap;
+     -ms-flex-wrap: wrap;
+         flex-wrap: wrap;
 }
 
 header div > img {
      display: block;
      width: 300px;
      height: 300px;
-     object-fit: cover;
+     -o-object-fit: cover;
+        object-fit: cover;
      margin: auto;
      border-radius: 50%;
      border: 3px solid rgb(0, 0, 0);
@@ -82,25 +95,36 @@ header div > h3{
 /* Gigs List*/
 
 .gigs {
+     display: -webkit-box;
+     display: -ms-flexbox;
      display: flex;
      width: 100%;
      margin: auto;
      margin-top: 30px;
-     justify-content: center;
+     -webkit-box-pack: center;
+         -ms-flex-pack: center;
+             justify-content: center;
 }
 
 
 .gigs > ul {
      width: 90%;
      margin: auto;
+     display: -webkit-box;
+     display: -ms-flexbox;
      display: flex;
-     justify-content: center;
-     flex-wrap: wrap;
+     -webkit-box-pack: center;
+         -ms-flex-pack: center;
+             justify-content: center;
+     -ms-flex-wrap: wrap;
+         flex-wrap: wrap;
      /* margin-left: 10%;  */
 }
 
 .gigs > ul:last-child {
-     justify-content: left;
+     -webkit-box-pack: left;
+         -ms-flex-pack: left;
+             justify-content: left;
 }
 
 .gigs ul > li {
@@ -123,14 +147,19 @@ header div > h3{
 /* About me */
 
 .aboutMe{
+     display:-webkit-box;
+     display:-ms-flexbox;
      display:flex;
-     flex-wrap: wrap;
+     -ms-flex-wrap: wrap;
+         flex-wrap: wrap;
      width: 100%;
      height: 230px;
      margin: auto;
      margin-top: 50px;
      text-align: center;
-     align-items: center;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
      background-color: white;
      /* border-radius: 50%; */
 }
