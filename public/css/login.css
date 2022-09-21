@@ -6,21 +6,21 @@
 */
 
 html {
-    height: 100vh;
+    height: 100%;
 }
 
 main {
-    display: -webkit-box;
+    /* display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: flex; */
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center;
+            /* justify-content: center; */
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
-    height: 100%;
-    /* margin: 120px 0; */
+            /* align-items: center; */
+    /* height: 100%; */
+    margin: 130px auto;
 }
 
 nav {
@@ -34,6 +34,7 @@ main form {
     width: 360px;
     border-radius: 20px;
     text-align: center;
+    margin: auto;
     /* border: 2px solid white; */
     border: 1px solid rgb(255, 255, 255, .5);
     -webkit-box-shadow: 10px 10px 5px 0px rgb(154, 153, 153);

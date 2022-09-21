@@ -10,16 +10,17 @@ nav {
 }
 
 main {
-    display: -webkit-box;
+    /* display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: flex; */
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center;
+            /* justify-content: center; */
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
-    height: 100%;
+            /* align-items: center; */
+    /* height: 100%; */
+    margin: 120px auto;
     /* flex-wrap: wrap; TEMP */
 }
 
@@ -28,6 +29,7 @@ main {
 }
 
 main form {
+    margin: auto;
     margin-bottom: 50px;
 }
 
