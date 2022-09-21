@@ -330,6 +330,12 @@ h2 {
         scroll-snap-align: start; 
     }
 
+    #second,
+    #third,
+    #fourth {
+        width: 70%;
+    }
+
     main section > div {
         line-height: 60px;
     }
@@ -396,7 +402,7 @@ h2 {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        width: 90%;
+        /* width: 90%; */
     }
 
     #second h2 {

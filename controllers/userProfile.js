@@ -32,7 +32,7 @@ module.exports = {
             await Profile.create({
                 userID: req.user.id,
                 userName: req.user.userName,
-                skills: req.body.skills.split(' '),
+                skills: req.body.skills.split(','),
                 image: result.secure_url,
                 cloudinaryId: result.public_id,
                 description: req.body.description,

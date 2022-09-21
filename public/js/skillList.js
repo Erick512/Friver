@@ -42,7 +42,7 @@ function showdescription() {
         skills.push(item.innerText)
     }
 
-    document.querySelector('.skillInput').value = skills.join(' ')
+    document.querySelector('.skillInput').value = skills.join(',')
     document.querySelector('.skillsSection').classList.add('hide')
     document.querySelector('.descriptionSection').classList.remove('hide')
 }
