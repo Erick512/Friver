@@ -5,7 +5,7 @@
 * Browsers: last 4 version
 */
 
-body {
+html {
     height: 100vh;
 }
 
@@ -20,6 +20,7 @@ main {
         -ms-flex-align: center;
             align-items: center;
     height: 100%;
+    /* margin: 120px 0; */
 }
 
 nav {
