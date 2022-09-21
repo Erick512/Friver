@@ -26,7 +26,7 @@ const ProfileSchema = new mongoose.Schema({
         require: false
     },
     phoneNumber: {
-        type: Number,
+        type: String,
         require: false
     },
     email: {
