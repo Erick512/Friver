@@ -37,8 +37,11 @@ main {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     color: white;
+    margin-top: 50px;
 }
 
+
+
 main div h1 {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }

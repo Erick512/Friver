@@ -95,88 +95,79 @@ header div > h3{
 /* Gigs List*/
 
 .gigs {
-     display: -webkit-box;
-     display: -ms-flexbox;
-     display: flex;
      width: 100%;
      margin: auto;
-     margin-top: 30px;
-     -webkit-box-pack: center;
-         -ms-flex-pack: center;
-             justify-content: center;
+     margin-top: 100px;
 }
 
+.gigs h2{
+     width: 100%;
+     border-bottom: 1px solid rgb(119, 119, 119);
+     padding-bottom: 20px;
+     color:#56ba9d
+}
 
-.gigs > ul {
-     width: 90%;
+.gigs div {
+     width: 380px;
      margin: auto;
-     display: -webkit-box;
-     display: -ms-flexbox;
      display: flex;
-     -webkit-box-pack: center;
-         -ms-flex-pack: center;
-             justify-content: center;
-     -ms-flex-wrap: wrap;
-         flex-wrap: wrap;
-     /* margin-left: 10%;  */
+     justify-content: center;
+     flex-direction: column;
 }
 
-.gigs > ul:last-child {
-     -webkit-box-pack: left;
-         -ms-flex-pack: left;
-             justify-content: left;
+.gigs div ul {
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
 }
 
-.gigs ul > li {
+.gigs div ul li {
+     padding: 20px 0 20px 0;
+     font-size: 20px;
      width: 50%;
-     padding-bottom: 10px;
-     font-size: 1rem;
-     width: 45%;
-     margin: 5px;
-     padding-left: 10%;
-     line-height: 25px;
+     line-height: 30px;
 }
 
-.gigs li > i {
+.gigs ul i {
+     font-size: 15px;
+     color:#56ba9d;
      padding-right: 10px;
-     font-size: 1rem;
-     color: #56ba9d;
 }
-   
 
 /* About me */
 
 .aboutMe{
-     display:-webkit-box;
-     display:-ms-flexbox;
-     display:flex;
-     -ms-flex-wrap: wrap;
-         flex-wrap: wrap;
-     width: 100%;
-     height: 230px;
+    width: 350px;
+    height: 350px; 
+    margin: 150px auto;
+    /* background-color: white; */
+    /* border-radius: 50%; */
+    border: 1px solid rgb(255, 255, 255, .5);
+     -webkit-box-shadow: 10px 10px 5px 0px rgb(154, 153, 153);
+            box-shadow: 10px 10px 5px 0px rgb(154, 153, 153);
+}
+
+.aboutMe div {
+     width: 320px;
      margin: auto;
-     margin-top: 50px;
      text-align: center;
-     -webkit-box-align: center;
-         -ms-flex-align: center;
-             align-items: center;
-     background-color: white;
+     padding: 50px 0;
+     /* background-color: white; */
      /* border-radius: 50%; */
 }
 
-.aboutMe > h2 {
-     width: 100%;
-     padding-top: 20px;
-     color: black;
+.aboutMe  h2 {
+     /* width: 100%; */
+     color: white;
+     padding-bottom: 20px;
 }
 
-.aboutMe > p {
+.aboutMe  p {
      margin: 0 auto;
      margin-bottom: 10px;
-     font-size: 1.3rem;
-     width: 70%;
-     line-height: 30px;
-     color: black;
+     font-size: 20px;
+     line-height: 40px;
+     color: white;
 }
 
 
@@ -190,18 +181,36 @@ header div > h3{
      margin: 100px auto;
 }
 
-.contact h3 {
-     text-align: left;
-     margin: 30px 0;
-     font-size: 20px;
-     background-color: white;
-     padding: 20px;
-     border-radius: 10px;
-     color: black;
+.contact h2 {
+     line-height: 40px;
 }
 
-.contact a {
-     color: black;
+.contact div {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     height: 50px;
+     margin: 30px 0;
+     border-radius: 40px;
+     background-color: rgba(58, 58, 58, 0.472);
+     border: 1px solid rgb(255, 255, 255, .5);
+     /* -webkit-box-shadow: 10px 10px 5px 0px rgb(154, 153, 153);
+            box-shadow: 10px 10px 5px 0px rgb(154, 153, 153); */
+}
+
+.contact div h3 {
+     /* width: 50%; */
+     /* height: 100%; */
+     color: white;
+     padding-left: 20px;
+     font-size: 20px;
+}
+
+.contact div a {
+     display: block;
+     color:#46bd9b;
+     padding-right: 20px;
      text-decoration: none;
-     border-bottom:1px solid #56ba9d;
+     font-size: 20px;
 }

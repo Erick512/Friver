@@ -66,33 +66,51 @@
             </header>
 
             <section class="gigs">
-                <ul>
 
-                    <% profile.skills.forEach( skill => { %>
-                        <li><i class="fa-solid fa-square-full"></i><%= skill %></li>
-                    <%})%>
-                    
-                </ul>
+
+                <div>
+                    <h2>Services</h2>
+                    <ul>
+
+                        <% profile.skills.forEach( skill => { %>
+                            <li><i class="fa-solid fa-square-full"></i><%= skill %></li>
+                        <%})%>
+                        
+                    </ul>
+                </div>
+
             </section>
 
             <section class="aboutMe">
-                <h2>About Me</h2>
-                <p><%= profile.description %></p>
+                <div>
+                    <h2>About Me</h2>
+                    <p><%= profile.description %></p>
+                </div>
             </section>
 
             <section class="contact">
                 <h2>Contact me for my services</h2>
 
                 <% if(profile.email) { %>
-                    <h3>Email: <a href="mailto:<%= profile.email %>"><%= profile.email %></a></h3>
+                    <div>
+                        <h3>Email</h3>
+                        <a href="mailto:<%= profile.email %>"><%= profile.email %></a>
+                    </div>
+                    
                 <%}%>
 
                 <% if(profile.phoneNumber) { %>
-                    <h3>Number: <a href="tel:<%= profile.phoneNumber %>"><%= profile.phoneNumber %></a></h3>
+                    <div>
+                        <h3>Number</h3>
+                        <a href="tel:<%= profile.phoneNumber %>"><%= profile.phoneNumber %></a>
+                    </div>
                 <%}%>
 
                 <% if(profile.website) { %>
-                <h3>Website: <a href="<%= profile.website %>"><%= profile.website %></a></h3>
+                    <div>
+                        <h3>Website</h3>
+                        <a href="<%= profile.website %>"><%= profile.website %></a>
+                    </div>
                 <%}%>
             </section>
         </main>
