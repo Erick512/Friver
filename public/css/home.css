@@ -84,11 +84,15 @@ h2 {
 
 /* second section */
 
+#second {
+    display: flex;
+    align-items: center;
+}
 
-#second > div {
+#second > div{
     text-align: left;
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
     font-size: 15px;
 }
 
@@ -106,7 +110,8 @@ h2 {
     height: 250px;
     border-radius: 50%;
     margin: auto;
-    margin-top: 140px;
+    margin-bottom: 50px;
+    margin-top: 200px;
 }
 
 #second  li {
@@ -119,7 +124,7 @@ h2 {
 
 #second  li.fa-car{
     color: white;
-    text-shadow: 0px 10px 10px rgba(210, 28, 210, 0.5);
+    /* text-shadow: 0px 10px 10px rgba(210, 28, 210, 0.5); */
 
 }
 
@@ -129,71 +134,71 @@ h2 {
 }
 
 .deg0 {
-    -webkit-transform: translate(130px);
-        -ms-transform: translate(130px);
-            transform: translate(130px);
+    -webkit-transform: translate(100px);
+        -ms-transform: translate(100px);
+            transform: translate(100px);
     -webkit-animation: deg0 20s linear infinite;
             animation: deg0 20s linear infinite;
 }
 
 .deg90 {
-    -webkit-transform: rotate(-90deg) translate(130px) rotate(90deg);
-        -ms-transform: rotate(-90deg) translate(130px) rotate(90deg);
-            transform: rotate(-90deg) translate(130px) rotate(90deg);
+    -webkit-transform: rotate(-90deg) translate(100px) rotate(90deg);
+        -ms-transform: rotate(-90deg) translate(100px) rotate(90deg);
+            transform: rotate(-90deg) translate(100px) rotate(90deg);
     -webkit-animation: deg90 20s linear infinite;
             animation: deg90 20s linear infinite;
 }
 
 .deg180{
-    -webkit-transform: rotate(-180deg) translate(130px) rotate(180deg);
-        -ms-transform: rotate(-180deg) translate(130px) rotate(180deg);
-            transform: rotate(-180deg) translate(130px) rotate(180deg);
+    -webkit-transform: rotate(-180deg) translate(100px) rotate(180deg);
+        -ms-transform: rotate(-180deg) translate(100px) rotate(180deg);
+            transform: rotate(-180deg) translate(100px) rotate(180deg);
     -webkit-animation: deg180 20s linear infinite;
             animation: deg180 20s linear infinite;
 }
 
 .deg270{
-    -webkit-transform: rotate(90deg) translate(130px) rotate(-90deg);
-        -ms-transform: rotate(90deg) translate(130px) rotate(-90deg);
-            transform: rotate(90deg) translate(130px) rotate(-90deg);
+    -webkit-transform: rotate(90deg) translate(100px) rotate(-90deg);
+        -ms-transform: rotate(90deg) translate(100px) rotate(-90deg);
+            transform: rotate(90deg) translate(100px) rotate(-90deg);
     -webkit-animation: deg270 20s linear infinite;
             animation: deg270 20s linear infinite;
 }
 
 
 @-webkit-keyframes deg0 {
-    from { -webkit-transform: rotate(0deg) translateX(130px) rotate(0deg); transform: rotate(0deg) translateX(130px) rotate(0deg); }
-    to   { -webkit-transform: rotate(360deg) translateX(130px) rotate(-360deg); transform: rotate(360deg) translateX(130px) rotate(-360deg); }
+    from { -webkit-transform: rotate(0deg) translateX(100px) rotate(0deg); transform: rotate(0deg) translateX(100px) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateX(100px) rotate(-360deg); transform: rotate(360deg) translateX(100px) rotate(-360deg); }
 }
 
 
 @keyframes deg0 {
-    from { -webkit-transform: rotate(0deg) translateX(130px) rotate(0deg); transform: rotate(0deg) translateX(130px) rotate(0deg); }
-    to   { -webkit-transform: rotate(360deg) translateX(130px) rotate(-360deg); transform: rotate(360deg) translateX(130px) rotate(-360deg); }
+    from { -webkit-transform: rotate(0deg) translateX(100px) rotate(0deg); transform: rotate(0deg) translateX(100px) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateX(100px) rotate(-360deg); transform: rotate(360deg) translateX(100px) rotate(-360deg); }
 }
 @-webkit-keyframes deg90 {
-    from { -webkit-transform: rotate(-90deg) translateX(130px) rotate(90deg); transform: rotate(-90deg) translateX(130px) rotate(90deg); }
-    to { -webkit-transform: rotate(270deg) translateX(130px) rotate(-270deg); transform: rotate(270deg) translateX(130px) rotate(-270deg); }
+    from { -webkit-transform: rotate(-90deg) translateX(100px) rotate(90deg); transform: rotate(-90deg) translateX(100px) rotate(90deg); }
+    to { -webkit-transform: rotate(270deg) translateX(100px) rotate(-270deg); transform: rotate(270deg) translateX(100px) rotate(-270deg); }
 }
 @keyframes deg90 {
-    from { -webkit-transform: rotate(-90deg) translateX(130px) rotate(90deg); transform: rotate(-90deg) translateX(130px) rotate(90deg); }
-    to { -webkit-transform: rotate(270deg) translateX(130px) rotate(-270deg); transform: rotate(270deg) translateX(130px) rotate(-270deg); }
+    from { -webkit-transform: rotate(-90deg) translateX(100px) rotate(90deg); transform: rotate(-90deg) translateX(100px) rotate(90deg); }
+    to { -webkit-transform: rotate(270deg) translateX(100px) rotate(-270deg); transform: rotate(270deg) translateX(100px) rotate(-270deg); }
 }
 @-webkit-keyframes deg180 {
-    from { -webkit-transform: rotate(-180deg) translateX(130px) rotate(180deg); transform: rotate(-180deg) translateX(130px) rotate(180deg); }
-    to   { -webkit-transform: rotate(180deg) translateX(130px) rotate(-180deg); transform: rotate(180deg) translateX(130px) rotate(-180deg); }
+    from { -webkit-transform: rotate(-180deg) translateX(100px) rotate(180deg); transform: rotate(-180deg) translateX(100px) rotate(180deg); }
+    to   { -webkit-transform: rotate(180deg) translateX(100px) rotate(-180deg); transform: rotate(180deg) translateX(100px) rotate(-180deg); }
 }
 @keyframes deg180 {
-    from { -webkit-transform: rotate(-180deg) translateX(130px) rotate(180deg); transform: rotate(-180deg) translateX(130px) rotate(180deg); }
-    to   { -webkit-transform: rotate(180deg) translateX(130px) rotate(-180deg); transform: rotate(180deg) translateX(130px) rotate(-180deg); }
+    from { -webkit-transform: rotate(-180deg) translateX(100px) rotate(180deg); transform: rotate(-180deg) translateX(100px) rotate(180deg); }
+    to   { -webkit-transform: rotate(180deg) translateX(100px) rotate(-180deg); transform: rotate(180deg) translateX(100px) rotate(-180deg); }
 }
 @-webkit-keyframes deg270 {
-    from { -webkit-transform: rotate(90deg) translateX(130px) rotate(-90deg); transform: rotate(90deg) translateX(130px) rotate(-90deg); }
-    to   { -webkit-transform: rotate(450deg) translateX(130px) rotate(-450deg); transform: rotate(450deg) translateX(130px) rotate(-450deg); }
+    from { -webkit-transform: rotate(90deg) translateX(100px) rotate(-90deg); transform: rotate(90deg) translateX(100px) rotate(-90deg); }
+    to   { -webkit-transform: rotate(450deg) translateX(100px) rotate(-450deg); transform: rotate(450deg) translateX(100px) rotate(-450deg); }
 }
 @keyframes deg270 {
-    from { -webkit-transform: rotate(90deg) translateX(130px) rotate(-90deg); transform: rotate(90deg) translateX(130px) rotate(-90deg); }
-    to   { -webkit-transform: rotate(450deg) translateX(130px) rotate(-450deg); transform: rotate(450deg) translateX(130px) rotate(-450deg); }
+    from { -webkit-transform: rotate(90deg) translateX(100px) rotate(-90deg); transform: rotate(90deg) translateX(100px) rotate(-90deg); }
+    to   { -webkit-transform: rotate(450deg) translateX(100px) rotate(-450deg); transform: rotate(450deg) translateX(100px) rotate(-450deg); }
 }
 
 /* third section */

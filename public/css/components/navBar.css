@@ -76,6 +76,8 @@ nav a {
     align-items: center;
 }
 
+
+
 #topBar:first-child {
     padding-left: 15px;
 }
@@ -114,12 +116,9 @@ nav a {
     font-weight: bold;
     padding: 20px;
     cursor: pointer;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
-.sidebarMenuInner:last-child {
-  border: none;
-}
 
 .sidebarMenuInner li:hover{
     color: rgb(37, 167, 162);
