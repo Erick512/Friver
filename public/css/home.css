@@ -316,6 +316,122 @@ h2 {
             transform: scale(.9);
 }
 
+@media (max-width: 400px) {
+    #second,
+    #third,
+    #fourth {
+        width: 300px;
+        margin: auto;
+    }
+
+
+
+    main section div h2 {
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    #third div img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #fourth #half img {
+        width: 100px;
+        padding-top: 100px;
+    }
+
+    #fourth h2 {
+        margin-top: 20px;
+    }
+
+    #fourth .signUpBtn {
+        margin: 20px auto;
+    }
+
+    #second ul {
+        width: 200px;
+        height: 200px;
+    }
+
+    #second li {
+        font-size: 2rem;
+    }
+    
+    .deg0 {
+        -webkit-transform: translate(70px);
+            -ms-transform: translate(70px);
+                transform: translate(70px);
+        -webkit-animation: deg0 20s linear infinite;
+                animation: deg0 20s linear infinite;
+    }
+    
+    .deg90 {
+        -webkit-transform: rotate(-90deg) translate(70px) rotate(90deg);
+            -ms-transform: rotate(-90deg) translate(70px) rotate(90deg);
+                transform: rotate(-90deg) translate(70px) rotate(90deg);
+        -webkit-animation: deg90 20s linear infinite;
+                animation: deg90 20s linear infinite;
+    }
+    
+    .deg180{
+        -webkit-transform: rotate(-180deg) translate(70px) rotate(180deg);
+            -ms-transform: rotate(-180deg) translate(70px) rotate(180deg);
+                transform: rotate(-180deg) translate(70px) rotate(180deg);
+        -webkit-animation: deg180 20s linear infinite;
+                animation: deg180 20s linear infinite;
+    }
+    
+    .deg270{
+        -webkit-transform: rotate(90deg) translate(70px) rotate(-90deg);
+            -ms-transform: rotate(90deg) translate(70px) rotate(-90deg);
+                transform: rotate(90deg) translate(70px) rotate(-90deg);
+        -webkit-animation: deg270 20s linear infinite;
+                animation: deg270 20s linear infinite;
+    }
+    
+    
+    @-webkit-keyframes deg0 {
+        from { -webkit-transform: rotate(0deg) translateX(70px) rotate(0deg); transform: rotate(0deg) translateX(70px) rotate(0deg); }
+        to   { -webkit-transform: rotate(360deg) translateX(70px) rotate(-360deg); transform: rotate(360deg) translateX(70px) rotate(-360deg); }
+    }
+    
+    
+    @keyframes deg0 {
+        from { -webkit-transform: rotate(0deg) translateX(70px) rotate(0deg); transform: rotate(0deg) translateX(70px) rotate(0deg); }
+        to   { -webkit-transform: rotate(360deg) translateX(70px) rotate(-360deg); transform: rotate(360deg) translateX(70px) rotate(-360deg); }
+    }
+    @-webkit-keyframes deg90 {
+        from { -webkit-transform: rotate(-90deg) translateX(70px) rotate(90deg); transform: rotate(-90deg) translateX(70px) rotate(90deg); }
+        to { -webkit-transform: rotate(270deg) translateX(70px) rotate(-270deg); transform: rotate(270deg) translateX(70px) rotate(-270deg); }
+    }
+    @keyframes deg90 {
+        from { -webkit-transform: rotate(-90deg) translateX(70px) rotate(90deg); transform: rotate(-90deg) translateX(70px) rotate(90deg); }
+        to { -webkit-transform: rotate(270deg) translateX(70px) rotate(-270deg); transform: rotate(270deg) translateX(70px) rotate(-270deg); }
+    }
+    @-webkit-keyframes deg180 {
+        from { -webkit-transform: rotate(-180deg) translateX(70px) rotate(180deg); transform: rotate(-180deg) translateX(70px) rotate(180deg); }
+        to   { -webkit-transform: rotate(180deg) translateX(70px) rotate(-180deg); transform: rotate(180deg) translateX(70px) rotate(-180deg); }
+    }
+    @keyframes deg180 {
+        from { -webkit-transform: rotate(-180deg) translateX(70px) rotate(180deg); transform: rotate(-180deg) translateX(70px) rotate(180deg); }
+        to   { -webkit-transform: rotate(180deg) translateX(70px) rotate(-180deg); transform: rotate(180deg) translateX(70px) rotate(-180deg); }
+    }
+    @-webkit-keyframes deg270 {
+        from { -webkit-transform: rotate(90deg) translateX(70px) rotate(-90deg); transform: rotate(90deg) translateX(70px) rotate(-90deg); }
+        to   { -webkit-transform: rotate(450deg) translateX(70px) rotate(-450deg); transform: rotate(450deg) translateX(70px) rotate(-450deg); }
+    }
+    @keyframes deg270 {
+        from { -webkit-transform: rotate(90deg) translateX(70px) rotate(-90deg); transform: rotate(90deg) translateX(70px) rotate(-90deg); }
+        to   { -webkit-transform: rotate(450deg) translateX(70px) rotate(-450deg); transform: rotate(450deg) translateX(70px) rotate(-450deg); }
+    }
+
+    .logIn-button {
+        width: 120px;
+        height: 30px;
+    }
+}
+
 @media (min-width: 700px) {
 
         /* main */
