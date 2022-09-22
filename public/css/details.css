@@ -36,14 +36,14 @@ main {
 main form {
     /* margin: auto; */
     /* margin-bottom: 50px; */
-    width: 360px;
+    width: 350px;
 
 }
 
 main form > section{
     background-color: black;
     /* height: 600px; */
-    width: 380px;
+    width: 350px;
     height: 100%;
     border-radius: 20px;
     text-align: center;
@@ -247,4 +247,47 @@ button:hover {
     -webkit-transform: scale(.9);
         -ms-transform: scale(.9);
             transform: scale(.9);
+}
+
+@media (max-width: 400px) {
+
+    main form  section {
+        margin: auto;
+        width: 260px;
+    }
+
+    #selectedImage.active {
+        width: 200px;
+        height: 200px;
+    }
+
+    label.image{
+        font-size: .8rem;
+        margin-left: 0px;
+    }
+
+    form h3 {
+        font-size: 1.2rem;
+    }
+    
+    input[type=email], input[type=password], input[type=text], input[type=number] {
+        width: 120px;
+        padding: 10px 5px;
+        margin-right: 10px;
+    }
+
+    .inner.btn {
+        margin-right: 10px;
+    }
+
+    .next {
+        font-size: 30px;
+    }
+
+    .skillsList i {
+        font-size: .7rem;
+        width: 100px;
+        padding: 15px;
+    }
+
 }

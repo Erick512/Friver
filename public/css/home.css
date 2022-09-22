@@ -455,7 +455,7 @@ h2 {
     #second,
     #third,
     #fourth {
-        width: 70%;
+        width: 80%;
     }
 
     main section > div {
@@ -765,4 +765,14 @@ h2 {
     /* .logIn-button:hover {
         box-shadow: 0px 0px 4px -1px #326b5b;;
     } */
+}
+
+@media (min-width: 1000px) {
+
+
+    #second,
+    #third,
+    #fourth {
+        width: 1400px;
+    }
 }

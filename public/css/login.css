@@ -31,7 +31,7 @@ main form {
     background-color: black;
     color:  #56ba9d;
     /* height: 600px; */
-    width: 360px;
+    width: 350px;
     border-radius: 20px;
     text-align: center;
     margin: auto;
@@ -213,4 +213,25 @@ div#btns {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin-bottom: 20px;
+}
+
+@media (max-width: 400px) {
+
+    main form {
+        width: 260px;
+    }
+
+    form h3 {
+        font-size: 1.2rem;
+    }
+    
+    input[type=email], input[type=password] {
+        width: 120px;
+        padding: 10px 5px;
+        margin-right: 10px;
+    }
+
+    form #btns  a{
+        margin-top: 10px;
+    }
 }

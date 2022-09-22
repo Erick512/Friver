@@ -31,10 +31,6 @@ nav {
      position: relative;
 }
 
-main {
-     /* height: 100%; */
-}
-
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
@@ -213,4 +209,56 @@ header div > h3{
      padding-right: 20px;
      text-decoration: none;
      font-size: 20px;
+}
+
+@media (max-width: 400px) {
+
+     main {
+          margin: 0 10px;
+     }
+
+    .heading {
+         width: 300px;
+    }
+     
+    .editBtn {
+         left: 0px;
+    }
+
+    header div > img {
+         width: 200px;
+         height: 200px;
+    }
+
+    .gigs div {
+         width: 100%;
+    }
+
+    .gigs div ul li {
+         font-size: 15px;
+    }
+
+    .aboutMe {
+         width: 90%;
+    }
+
+    .aboutMe div {
+         width: 90%;
+    }
+
+    .aboutMe p {
+         font-size: 15px;
+    }
+
+    .contact {
+         width: 100%;
+    }
+
+    .contact div h3 {
+         font-size: 15px;
+    }
+
+    .contact div a {
+         font-size: 15px;
+    }
 }

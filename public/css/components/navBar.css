@@ -76,11 +76,10 @@ nav a {
     align-items: center;
 }
 
-
-
-#topBar:first-child {
-    padding-left: 15px;
+#topBar i img {
+  width: 50px;
 }
+
 
 #topBar > h2 {
     font-size: 2rem;

@@ -28,7 +28,7 @@ main {
 main form {
     background-color: black;
     /* height: 600px; */
-    width: 360px;
+    width: 350px;
     border-radius: 20px;
     text-align: center;
     margin: auto;
@@ -97,6 +97,14 @@ form .spacing {
     margin-bottom: 20px;
 }
 
+form .email h4 {
+    width: 100%;
+    padding-top: 10px;
+    font-size: .8rem;
+    text-align: left;
+    margin-left: 20px;
+    color: rgb(126, 126, 126);
+}
 
 label {
     /* display: block; */
@@ -185,4 +193,25 @@ input[type=email], input[type=password], input[type=text] {
 
 .errors {
     margin-top: 20px;
+}
+
+@media (max-width: 400px) {
+
+    main form {
+        width: 260px;
+    }
+
+    form h3 {
+        font-size: 1.2rem;
+    }
+    
+    input[type=email], input[type=password], input[type=text] {
+        width: 120px;
+        padding: 10px 5px;
+        margin-right: 10px;
+    }
+
+    form .encapBtn input{
+        margin-right: 10px;
+    }
 }

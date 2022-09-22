@@ -44,8 +44,7 @@ s        <title>Document</title>
             </div>
             <div id="sidebarMenu">
                 <ul class="sidebarMenuInner">
-                    <a href="/">Home</a>
-                    <a href="logout">Log Out</a>
+                    <a href="/"><li>Home</li></a>
                 </ul>
             </div>
         </nav>
@@ -119,7 +118,7 @@ s        <title>Document</title>
                         </div>
                         <div class="inner">
                             <label for="phoneNumber">Phone number</label>
-                            <input type="number" name="phoneNumber" placeholder="optional">
+                            <input type="number" pattern="[0-9]*" name="phoneNumber" placeholder="optional">
                         </div>
                         <div class="inner">
                             <label for="website">Personal Website</label>
