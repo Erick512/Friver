@@ -1,7 +1,7 @@
 <%- include('partials/header') -%>
 
         <!-- This file css -->
-        <link rel="stylesheet" href="/css/profile.css">
+        <!-- <link rel="stylesheet" href="/css/feed.css"> -->
 
     </head>
     <body>
@@ -30,45 +30,10 @@
             </div>
         </nav>
 
-        <main>
+        <main class="container">
 
-            <header>
-                <div>
-                    <img src="<%= profile.image %>"" alt="Profile Picture">
-                    <h3><%= profile.userName %></h3>
-                </div>
-            </header>
-
-            <section class="gigs">
-                <ul>
-
-                    <% profile.skills.forEach( skill => { %>
-                        <li><i class="fa-solid fa-square-full"></i><%= skill %></li>
-                    <%})%>
-                    
-                </ul>
+            <section class="postSection">
+                <form action=""></form>
             </section>
 
-            <section class="aboutMe">
-                <h2>About Me</h2>
-                <p><%= profile.description %></p>
-            </section>
-
-            <section class="contact">
-                <h2>Contact me for my services</h2>
-
-                <h3>Work email: alonoserick@icloud.com</h3>
-                <h3>Website: erickalonso.com</h3>
-            </section>
         </main>
-
-        <footer>
-            <h3>&#9400 2022 Erick Alonso. All rights reserved. Design: Erick Alonso</h3>
-        </footer>    
-        
-        <!-- scripts -->
-        <script src="https://kit.fontawesome.com/d5ce7117b5.js" crossorigin="anonymous"></script>
-        <script src="/js/buttons.js"></script>
-        <script src="/js/skillList.js"></script>
-    </body>
-</html>

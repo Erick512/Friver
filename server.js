@@ -10,6 +10,7 @@ const connectDB = require('./config/database')
 const mainRoutes = require('./routes/main')
 const profileRoutes = require('./routes/profile')
 const qrCodeRoutes = require('./routes/qrCode')
+const feedRoutes = require('./routes/feed')
 const cors = require('cors')
 
 app.use(cors())
@@ -46,6 +47,7 @@ app.use(flash()) // requires sessions
 app.use('/', mainRoutes)
 app.use('/profile', profileRoutes)
 app.use('/qrCode', qrCodeRoutes)
+app.use('/feed', feedRoutes)
 app.use((req, res, next) => {
   res.status(404).send(
       "<h1>Page not found on the server</h1>")
