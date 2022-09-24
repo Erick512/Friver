@@ -28,8 +28,10 @@ module.exports = {
           $inc: { likes: 1 },
         }
       );
+      console.log(comment.post.id)
+      console.log(req.params.id)
       console.log("Likes +1");
-      res.redirect(`/feed/getPost/${comment.post}`);
+      res.redirect(`/feed/getPost/${req.params.id}`);
     } catch (err) {
       console.log('error here at contoller')
       console.log(err);

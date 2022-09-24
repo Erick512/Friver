@@ -1,6 +1,6 @@
 nav {
     position: fixed;
-    height: 60px;
+    height: 50px;
     width: 100%;
     color: white;
     /* background-color: rgba(83, 83, 83, 0.387); */
@@ -76,12 +76,12 @@ nav a {
 }
 
 #topBar i img {
-  width: 50px;
+  width: 40px;
 }
 
 
 #topBar > h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 /* Side bar */

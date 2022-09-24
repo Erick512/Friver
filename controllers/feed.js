@@ -74,6 +74,24 @@ module.exports = {
             console.log(err);
         }
     },
+    likePost: async (req, res) => {
+
+      try {
+
+        const post = await Post.findById(req.params.id)
+
+          await Post.findOneAndUpdate(
+            { _id: req.params.id },
+            {
+              $inc: { likes: 1 },
+            }
+          );
+          console.log("Likes +1");
+          res.redirect(`/feed/getPost/${post.id}`);
+      } catch (err) {
+          console.log(err);
+      }
+    },
     getPost: async (req, res) => {
       try {
 

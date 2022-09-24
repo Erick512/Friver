@@ -36,7 +36,7 @@
 
             <form action="/comments/createComment/<%=post.id%>" id="addComment" class="hide" method="POST">
                 <div class="buttons">
-                    <h3>Replying to: <%= post.userName %></h3>
+                    <h3>Replying to: <i><%= post.userName %></i></h3>
                     <div>
                         <button type="button" class="cancel">Cancel</button>                
                         <button class="Reply">Reply</button>  
@@ -48,6 +48,11 @@
             <section id="post">
 
                 <div id="<%= post._id %>" class="post">
+
+                    <div class="goBackDiv">
+                         <a href="/feed#<%= post._id  %>"><button id="goBack" class="fa-solid fa-chevron-left"></button></a>
+                    </div>
+
                     <h3 class="postUserName"><%= post.userName %></h3>
                     <h2 class="postTitle"><%= post.title %></h2>
                     <p class="postCaption"><%= post.caption %></p>
@@ -67,7 +72,7 @@
                 </div>
 
                 <section id="comments">
-                    
+
                     <% comments.forEach(comment => { %>
                     
                     <div id="commentBlock">

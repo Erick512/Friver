@@ -1,7 +1,6 @@
 nav {
     position: fixed;
     /* transition: all 250ms ease-in-out; */
-    background-color: rgba(0, 0, 0, 0.803);
 }
 
 nav #sidebarMenu {
@@ -31,6 +30,21 @@ i.fa-plus.rotate {
     transform: rotate(45deg);
 }
 
+#post .goBackDiv{   
+    width: 90%;
+    margin: auto;
+}
+
+.goBackDiv button {
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#goBack {
+}
 
 #addComment  {
     position: fixed;
@@ -83,24 +97,29 @@ i.fa-plus.rotate {
 #addComment .buttons {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
+}
+
+#addComment .buttons h3 {
+    flex: 1;
+    line-height: 25px;
+}
+
+#addComment .buttons h3 i {
+    color: #56ba9d;
 }
 
 #addComment .buttons button, #addComment .buttons label{
     background-color: black;
     border: none;
     color:#56ba9d;
-    font-size: 20dpx;
+    font-size: 20px;
+    padding: 0 20px;
 }
 
-#addComment .buttons button.fa-image {
-    font-size: 25px;
-}
-
-#addComment #selectedImage {
-    width: 100%;
-    margin-bottom: 100px;
+#addComment .buttons button:first-child {
+    border-right: 1px solid rgb(110, 110, 110);
 }
 
 /* Post */
@@ -111,7 +130,7 @@ i.fa-plus.rotate {
 }
 
 .post {
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 #post > div {
@@ -258,6 +277,6 @@ i.fa-plus.rotate {
 
     #addComment {
         width: 700px;
-        margin-top: 70px;
+        margin-top: 50px;
     }
 }

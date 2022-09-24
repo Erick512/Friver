@@ -9,6 +9,10 @@ const ProfileSchema = new mongoose.Schema({
         type: String,
         require: true
     },
+    fullName:{
+        type: String,
+        require: true
+    },
     image: {
         type: String,
         require: true,

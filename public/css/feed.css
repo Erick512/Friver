@@ -188,5 +188,10 @@ i.fa-plus.rotate {
         margin: auto;
         width: 700px;
     }
+
+    #postSection  {
+        width: 700px;
+        margin-top: 50px;
+    }
     
 }
