@@ -34,7 +34,7 @@
 
             <!-- add comment form -->
 
-            <form action="/comments/createComment/<%=post.id%>" id="addComment" class="hide" method="POST">
+            <form action="/comments/createComment/<%=post._id%>" id="addComment" class="hide" method="POST">
                 <div class="buttons">
                     <h3>Replying to: <i><%= post.userName %></i></h3>
                     <div>
@@ -72,6 +72,8 @@
                 </div>
 
                 <section id="comments">
+
+                    <h3>Comments</h3>
 
                     <% comments.forEach(comment => { %>
                     

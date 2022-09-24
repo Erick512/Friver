@@ -31,7 +31,7 @@ module.exports = {
       console.log(comment.post.id)
       console.log(req.params.id)
       console.log("Likes +1");
-      res.redirect(`/feed/getPost/${req.params.id}`);
+      res.redirect(`/feed/getPost/${comment.post}`);
     } catch (err) {
       console.log('error here at contoller')
       console.log(err);
