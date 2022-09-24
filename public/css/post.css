@@ -1,0 +1,263 @@
+nav {
+    position: fixed;
+    /* transition: all 250ms ease-in-out; */
+    background-color: rgba(0, 0, 0, 0.803);
+}
+
+nav #sidebarMenu {
+    background-color: rgba(0, 0, 0, 0.803);
+}
+
+main {
+    /* margin-top: 70px; */
+    width: 100%;
+    height: 100%;
+    /* overflow-y: scroll; */
+}
+
+/* form */
+
+i.fa-plus {
+    position: fixed;
+    font-size: 50px;
+    bottom: 30px;
+    right: 30px;
+    color:#56ba9e;
+    transition: all .3s ease-in-out;
+    z-index: 99;
+}
+
+i.fa-plus.rotate {
+    transform: rotate(45deg);
+}
+
+
+#addComment  {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding: 30px 20px 0 20px;
+    /* left: 50%; */
+    /* margin-left: -45%; */
+    transition: transform 250ms ease-in-out;
+    background-color: black;
+    z-index: 9;
+    overflow-y: scroll;
+}
+
+
+.hide {
+    transform: translateY(-150%);
+}
+
+#addComment #imageUpload {
+    display: none;
+}
+
+#addComment input[type=text] {
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 25px;
+}
+
+#addComment textarea {
+    width: 100%;
+    border-radius: 10px;
+    background-color: black;
+    color: rgb(205, 205, 205);
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    line-height: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+#addComment .buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#addComment .buttons button, #addComment .buttons label{
+    background-color: black;
+    border: none;
+    color:#56ba9d;
+    font-size: 20dpx;
+}
+
+#addComment .buttons button.fa-image {
+    font-size: 25px;
+}
+
+#addComment #selectedImage {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+/* Post */
+
+#post {
+    width: 100%;
+    margin: auto;
+}
+
+.post {
+    margin-top: 70px;
+}
+
+#post > div {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.155);
+    padding: 30px 0;
+}
+
+#post > div > a {
+    color: white;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#post div .postUserName, #post div .postCaption, #post div .postTitle {
+    width: 90%;
+    margin: auto;
+}
+
+#post div .postUserName {
+    margin-bottom: 20px;
+    color: #56ba9d;
+}
+#post div .postTitle {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+#post div .postCaption {
+    line-height: 30px;
+    color: rgb(205, 205, 205);
+    margin-bottom: 20px;
+}
+
+#post div img {
+    width: 90%;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+#post div div.buttons {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#post div div.buttons button, .commentBtns button {
+    background-color: black;
+    width: 80px;
+    height: 40px;
+    border: none;
+    color:#56ba9d;
+    font-size: 15px;
+    padding: 10px 5px;
+    border: 1px solid rgba(165, 165, 165, 0.415);
+    border-radius: 40px;
+}
+
+#post div div.buttons button:hover {
+    transform: scale(.8);
+}
+
+#post div div.buttons button i {
+    padding-left: 10px;
+}
+
+/* Comments */
+
+#comments {
+    width: 90%;
+    margin: auto;
+}
+
+#commentBlock {
+    margin: 20px 0;
+}
+
+#addCommentBlock {
+    width: 100%;
+}
+
+#addCommentBlock label, #addCommentBlock input{
+    width: 100%;
+}
+
+
+#addCommentBlock input {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* comment block */
+
+#commentBlock {
+    width: 100%;
+    border-left: 1px solid rgb(105, 105, 105);
+    padding-left: 10px;
+}
+
+#commentBlock > div {
+    width: 100%;
+}
+
+/* comment heading */
+
+.commentHeading h3 {
+    color: #56ba9d;
+}
+
+/* comment */
+
+#commentBlock .comment {
+    padding-top: 10px;
+}
+
+.commentBtns {
+    margin-top: 10px;
+}
+
+.commentBtns button {
+    width: 50px;
+    height: 25px;
+    font-size: 10px;
+    padding: 8px 3px;
+}
+
+.commentBtns button i {
+    padding-left: 5px;
+}
+
+#replies {
+    margin: 20px 0 20px 20px;
+}
+
+@media (min-width: 800px) {
+
+    main {
+        margin: auto;
+        width: 700px;
+    }
+
+    #addComment {
+        width: 700px;
+        margin-top: 70px;
+    }
+}

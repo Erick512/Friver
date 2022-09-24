@@ -38,7 +38,10 @@ nav {
 /* Header */
 
 .heading {
-     width: 300px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 350px;
      margin: auto;
      margin-top: 30px;
 }
@@ -46,17 +49,11 @@ nav {
 .heading h2{
      width: 100%;
      text-align: center;
+     font-size: 1.8rem;
 }
 
-.editBtn {
-     position: relative;
-     bottom: 35px;
-     left: -30px;
-     font-size: 30px;
-}
-
-.editBtn:hover {
-     color: #56ba9d;
+.heading i {
+     font-size: 25px;
 }
 
 header > div {
@@ -72,8 +69,8 @@ header > div {
 
 header div > img {
      display: block;
-     width: 300px;
-     height: 300px;
+     width: 270px;
+     height: 270px;
      -o-object-fit: cover;
         object-fit: cover;
      margin: auto;
@@ -83,7 +80,7 @@ header div > img {
 
 header div > h3{
      text-align: center;
-     font-size: 2.5rem;
+     font-size: 2.2rem;
      padding-top: 20px;
      width: 100%;
 }
@@ -100,7 +97,8 @@ header div > h3{
      width: 100%;
      border-bottom: 1px solid rgb(119, 119, 119);
      padding-bottom: 20px;
-     color:#56ba9d
+     color:#56ba9d;
+     font-size: 1.8rem;
 }
 
 .gigs div {
@@ -119,7 +117,7 @@ header div > h3{
 
 .gigs div ul li {
      padding: 20px 0 20px 0;
-     font-size: 20px;
+     font-size: 17px;
      width: 50%;
      line-height: 30px;
 }
@@ -161,7 +159,7 @@ header div > h3{
 .aboutMe  p {
      margin: 0 auto;
      margin-bottom: 10px;
-     font-size: 20px;
+     font-size: 18px;
      line-height: 40px;
      color: white;
 }
@@ -179,6 +177,7 @@ header div > h3{
 
 .contact h2 {
      line-height: 40px;
+     font-size: 1.8rem;
 }
 
 .contact div {
@@ -217,17 +216,24 @@ header div > h3{
           margin: 0 10px;
      }
 
+     h2{
+          font-size: 1.6rem;
+     }
+
     .heading {
-         width: 300px;
+         width: 90%;
     }
-     
-    .editBtn {
-         left: 0px;
-    }
+
+    .heading
+       
 
     header div > img {
          width: 200px;
          height: 200px;
+    }
+
+    header div h3 {
+         font-size: 2.2rem;
     }
 
     .gigs div {

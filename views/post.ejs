@@ -1,7 +1,7 @@
 <%- include('partials/header') -%>
 
         <!-- This file css -->
-        <link rel="stylesheet" href="/css/feed.css">
+        <link rel="stylesheet" href="/css/post.css">
 
     </head>
     <body>
@@ -32,50 +32,66 @@
 
         <main class="container">
 
-            <i class="fa-solid fa-plus postBtn"></i>
-            
-            <!-- Post Form -->
+            <!-- add comment form -->
 
-            <form action="/feed/createPost" method="POST" enctype="multipart/form-data" id="postSection" class="hide">
+            <form action="/comments/createComment/<%=post.id%>" id="addComment" class="hide" method="POST">
                 <div class="buttons">
-                    <button type="button" class="cancel">Cancel</button>
-                    <label for="imageUpload" class="fa-solid fa-image"></label>
-                    <input type="file" name="file" id="imageUpload" class="image">
-                    <button>Post</button>
+                    <h3>Replying to: <%= post.userName %></h3>
+                    <div>
+                        <button type="button" class="cancel">Cancel</button>                
+                        <button class="Reply">Reply</button>  
+                    </div>               
                 </div>
-                <input type="text" name="title" id="title" placeholder="Title">
-                <textarea name="caption" id="caption" autofocus cols="30" rows="5" placeholder="What's happening?"></textarea>
-                <img id="selectedImage" alt="">       
+                <textarea name="commentInput" id="commentInput" autofocus cols="30" rows="5" placeholder="Add comment"></textarea>
              </form>
 
-             <!-- Feed -->
+            <section id="post">
 
-            <section id="feed">
-
-                <% posts.forEach(post => { %>
-
-                <div id="<%= post._id %>">
-                    <a href="/feed/getPost/<%= post._id %>">
-                    <h3><%= post.userName %></h3>
-                    <h2><%= post.title %></h2>
-                    <p><%= post.caption %></p>
+                <div id="<%= post._id %>" class="post">
+                    <h3 class="postUserName"><%= post.userName %></h3>
+                    <h2 class="postTitle"><%= post.title %></h2>
+                    <p class="postCaption"><%= post.caption %></p>
                     <img src="<%= post.image %>" alt="">
                     <div class="buttons">
                         <%= console.log(post._id) %>
-                        <form action="/feed/likeFeedPost/<%= post._id %>?_method=PUT" method="POST">
+                        <form action="/feed/likePost/<%= post._id %>?_method=PUT" method="POST">
                             <button type="submit" class="fa-solid fa-thumbs-up">
                                 <% if(post.likes != 0) { %>
                                     <i> <%= post.likes %> </i>
                                 <%}%> 
                             </button>
                         </form>
-                        <button class="fa-regular fa-comment"><i>0</i></button>
+                        <button class="fa-regular fa-comment commentBtn"></button>
                         <button class="fa-solid fa-share"></button>
                     </div>
-                    </a>
                 </div>
 
-                <%})%>
+                <section id="comments">
+                    
+                    <% comments.forEach(comment => { %>
+                    
+                    <div id="commentBlock">
+                        <div class="commentHeading">
+                            <h3><%= comment.userName %></h3>
+                        </div>
+                        <div class="comment">
+                            <h4><%= comment.comment %></h4>
+                        </div>
+                        <div class="commentBtns">
+                            <form action="/comments/likeComment/<%= comment._id %>?_method=PUT" method="POST">
+                                <button type="submit" class="fa-solid fa-thumbs-up">
+                                    <% if( comment.likes != 0) { %>
+                                        <i> <%= comment.likes %> </i>
+                                    <%}%> 
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <% }) %>
+
+                </section>
+
             </section>
 
         </main>

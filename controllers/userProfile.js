@@ -31,6 +31,7 @@ module.exports = {
 
             await Profile.create({
                 userID: req.user.id,
+                fullName: req.user.fullName,
                 userName: req.user.userName,
                 skills: req.body.skills.split(','),
                 image: result.secure_url,
@@ -48,7 +49,7 @@ module.exports = {
         } catch(err) {
             console.log(err)
         }
-    }
+    },
 }
 
 let formatPhoneNumber = (str) => {

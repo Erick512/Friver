@@ -10,7 +10,7 @@
         <!-- Nav and sidebar -->
         <nav>
             <div id="topBar">
-                <i><img src="images/logo.svg" alt=""></i>
+                <a href="/"><i><img src="images/logo.svg" alt=""></i></a>
                 <h2>Friver</h2>
                 <button class="menu"  aria-label="Main Menu">
                 <svg width="100" height="100" viewBox="0 0 100 100">
@@ -22,7 +22,7 @@
             </div>
             <div id="sidebarMenu">
                 <ul class="sidebarMenuInner">
-                    <!-- <a href="/feed"><li>Home</li></a> -->
+                    <a href="/feed"><li>Home</li></a>
                     <a href="/logout"><li>Log out</li></a>
                     <a href="/qrCode"><li>My QR Code</li></a>
                 </ul>
@@ -32,17 +32,18 @@
         <main>
 
             <% if(user.id == profile.userID) { %>
-            <%= console.log(user.id, profile.userID) %>
-            <div class="heading">
-                <h2>Profile Preview</h2>
+
+                <div class="heading">
                 <i class="fa-solid fa-pen-to-square editBtn"></i>
+                <h2>Profile Preview</h2>
+                <a href="/qrCode"><i class="fa-solid fa-qrcode qrButton"></i></a>
             </div>
             <%}%>
 
             <header>
                 <div>
                     <img src="<%= profile.image %>" alt="Profile Picture">
-                    <h3><%= profile.userName %></h3>
+                    <h3><%= profile.fullName %></h3>
                 </div>
             </header>
 
