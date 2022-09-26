@@ -148,6 +148,8 @@ i.fa-plus.rotate {
 
 #feed div img {
     width: 90%;
+    height: 350px;
+    object-fit: cover;
     display: block;
     margin: auto;
     margin-bottom: 20px;
@@ -169,7 +171,7 @@ i.fa-plus.rotate {
     color:#56ba9d;
     font-size: 15px;
     padding: 10px 5px;
-    border: 1px solid rgba(165, 165, 165, 0.415);
+    border: 1px solid rgba(165, 165, 165, 0.208);
     border-radius: 40px;
 }
 

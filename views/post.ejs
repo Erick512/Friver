@@ -36,7 +36,7 @@
 
             <form action="/comments/createComment/<%=post._id%>" id="addComment" class="hide" method="POST">
                 <div class="buttons">
-                    <h3>Replying to: <i><%= post.userName %></i></h3>
+                    <h3>Replying to: <span><%= post.userName %></span></h3>
                     <div>
                         <button type="button" class="cancel">Cancel</button>                
                         <button class="Reply">Reply</button>  
@@ -44,6 +44,8 @@
                 </div>
                 <textarea name="commentInput" id="commentInput" autofocus cols="30" rows="5" placeholder="Add comment"></textarea>
              </form>
+
+             <!-- post -->
 
             <section id="post">
 
@@ -71,29 +73,15 @@
                     </div>
                 </div>
 
+                <!-- comments -->
+
                 <section id="comments">
 
                     <h3>Comments</h3>
 
                     <% comments.forEach(comment => { %>
                     
-                    <div id="commentBlock">
-                        <div class="commentHeading">
-                            <h3><%= comment.userName %></h3>
-                        </div>
-                        <div class="comment">
-                            <h4><%= comment.comment %></h4>
-                        </div>
-                        <div class="commentBtns">
-                            <form action="/comments/likeComment/<%= comment._id %>?_method=PUT" method="POST">
-                                <button type="submit" class="fa-solid fa-thumbs-up">
-                                    <% if( comment.likes != 0) { %>
-                                        <i> <%= comment.likes %> </i>
-                                    <%}%> 
-                                </button>
-                            </form>
-                        </div>
-                    </div>
+                        <%- include('partials/comments', {post: post, userId: user.id, comment: comment, depth: 0}) -%>
 
                     <% }) %>
 

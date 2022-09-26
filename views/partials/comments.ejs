@@ -1,0 +1,40 @@
+<div id="commentBlock">
+	<div class="commentHeading">
+		<h3><%= comment.userName %></h3>
+	</div>
+	<div class="comment">
+		<h4><%= comment.comment %></h4>
+	</div>
+	<div class="commentBtns">
+		<form action="/comments/likeComment/<%= comment._id %>?_method=PUT" method="POST">
+			<button type="submit" class="fa-solid fa-thumbs-up">
+				<% if( comment.likes != 0) { %>
+					<i> <%= comment.likes %> </i>
+				<%}%> 
+			</button>
+		</form>
+		<button class="fa-solid fa-reply replyToComment"></button>
+	</div>
+
+	<div id="replies">
+
+		<% for (const subComment of comment.comments || []) { %>
+	
+		<%- include('comments', {post, userId, comment: subComment, depth: depth + 1}) -%>
+			
+		<%}%>
+	</div>
+</div>
+
+<!-- add reply form -->
+
+<form action="/comments/createComment/<%=post._id%>/<%=comment._id%>" id="replyToComment" class="hide" method="POST">
+	<div class="buttons">
+		<h3>Replying to: <span><%= comment.userName %></span></h3>
+		<div>
+			<button type="button" class="cancelReply">Cancel</button>                
+			<button class="Reply">Reply</button>  
+		</div>               
+	</div>
+	<textarea name="commentInput" id="commentInput" autofocus cols="30" rows="5" placeholder="Add comment"></textarea>
+</form>

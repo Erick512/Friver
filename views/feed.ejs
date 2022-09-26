@@ -59,7 +59,12 @@
                     <h3><%= post.userName %></h3>
                     <h2><%= post.title %></h2>
                     <p><%= post.caption %></p>
-                    <img src="<%= post.image %>" alt="">
+
+                    <% if(post.image) { %>
+                        
+                        <img src="<%= post.image %>" alt="">
+                    <%}%>
+
                     <div class="buttons">
                         <%= console.log(post._id) %>
                         <form action="/feed/likeFeedPost/<%= post._id %>?_method=PUT" method="POST">
@@ -69,8 +74,12 @@
                                 <%}%> 
                             </button>
                         </form>
-                        <button class="fa-regular fa-comment"><i>0</i></button>
-                        <button class="fa-solid fa-share"></button>
+                        <button class="fa-regular fa-comment">
+                            <!-- <% if(post.comment != 0) { %>
+                                <i> <%= post.likes %> </i>
+                            <%}%>  -->
+                        </button>
+                        <!-- <button class="fa-solid fa-share"></button> -->
                     </div>
                     </a>
                 </div>

@@ -96,7 +96,11 @@ module.exports = {
       try {
 
         const comments = await Comment.find({ post: req.params.id }).sort({ createdAt: "desc" }).lean();
-        const post = await Post.findById(req.params.id)
+        const post = await Post.findById(req.params.id).populate({
+          path: 'comments',
+          populate: { path: 'user' }
+        });
+        
         res.render("post.ejs", {post: post, user: req.user, comments: comments})
 
       } catch(err){

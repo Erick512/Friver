@@ -46,7 +46,7 @@ i.fa-plus.rotate {
 #goBack {
 }
 
-#addComment  {
+#addComment, #replyToComment  {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -61,7 +61,7 @@ i.fa-plus.rotate {
 }
 
 
-.hide {
+#addComment.hide, #replyToComment.hide {
     transform: translateY(-150%);
 }
 
@@ -69,7 +69,8 @@ i.fa-plus.rotate {
     display: none;
 }
 
-#addComment input[type=text] {
+#addComment input[type=text], 
+#replyToComment input[type=text] {
     width: 100%;
     padding: 10px 20px;
     margin-top: 30px;
@@ -80,7 +81,8 @@ i.fa-plus.rotate {
     font-size: 25px;
 }
 
-#addComment textarea {
+#addComment textarea, 
+#replyToComment textarea {
     width: 100%;
     border-radius: 10px;
     background-color: black;
@@ -94,23 +96,29 @@ i.fa-plus.rotate {
     font-size: 20px;
 }
 
-#addComment .buttons {
+#addComment .buttons, 
+#replyToComment .buttons {
     display: flex;
     width: 100%;
     /* justify-content: space-between; */
     align-items: center;
 }
 
-#addComment .buttons h3 {
+#addComment .buttons h3, 
+#replyToComment .buttons h3 {
     flex: 1;
     line-height: 25px;
 }
 
-#addComment .buttons h3 i {
+#addComment .buttons h3 span, 
+#replyToComment .buttons h3 span {
     color: #56ba9d;
 }
 
-#addComment .buttons button, #addComment .buttons label{
+#addComment .buttons button, 
+#addComment .buttons label, 
+#replyToComment .buttons button, 
+#replyToComment .buttons label{
     background-color: black;
     border: none;
     color:#56ba9d;
@@ -203,18 +211,20 @@ i.fa-plus.rotate {
 /* Comments */
 
 #comments {
+    width: 100%;
+    margin: auto;
+}
+
+#comments > h3 {
     width: 90%;
     margin: auto;
-    padding: 30px 0;
 }
 
 #commentBlock {
-    margin: 20px 0;
-}
-
-#addCommentBlock {
     width: 100%;
 }
+
+
 
 #addCommentBlock label, #addCommentBlock input{
     width: 100%;
@@ -228,15 +238,12 @@ i.fa-plus.rotate {
 /* comment block */
 
 #commentBlock {
-    width: 100%;
+    width: 90%;
     border-left: 1px solid rgb(105, 105, 105);
     padding-left: 10px;
+    margin: 15px auto;
 }
 
-
-#commentBlock > div {
-    width: 100%;
-}
 
 /* comment heading */
 
@@ -250,11 +257,19 @@ i.fa-plus.rotate {
     padding-top: 10px;
 }
 
-.commentBtns {
+#comments .commentBtns {
+    /* width: 150px; */
+    display: flex;
+    justify-content: space-between;
     margin-top: 10px;
 }
 
+/* .commentBtns form  {
+    width: 100px;
+} */
+
 .commentBtns button {
+    display: inline-block;
     width: 50px;
     height: 25px;
     font-size: 10px;
@@ -266,7 +281,7 @@ i.fa-plus.rotate {
 }
 
 #replies {
-    margin: 20px 0 20px 20px;
+    margin-left: 20px;
 }
 
 @media (min-width: 800px) {

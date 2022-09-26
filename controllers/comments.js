@@ -9,10 +9,11 @@ module.exports = {
         likes: 0,
         userName: req.user.userName,
         userId: req.user,
-        post: req.params.id,
+        post: req.params.postId,
+        commentID: req.params.commentId
       });
       console.log("Comment has been added!");
-      res.redirect(`/feed/getPost/${req.params.id}`);
+      res.redirect(`/feed/getPost/${req.params.postId}`);
     } catch (err) {
       console.log(err);
     }
