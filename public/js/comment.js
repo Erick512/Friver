@@ -1,8 +1,10 @@
 document.querySelector('.commentBtn').addEventListener('click', showAddPost)
 document.querySelector('.cancel').addEventListener('click', showAddPost)
 document.querySelector('.cancelReply').addEventListener('click', showReply)
-document.querySelector('.replyToComment').addEventListener('click', showReply)
 
+let replyBtns = document.querySelectorAll('.replyToComment')
+
+replyBtns.forEach(btn => btn.addEventListener('click', showReply))
 
 function showAddPost() {
 

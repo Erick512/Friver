@@ -165,11 +165,11 @@ i.fa-plus.rotate {
 
 #feed div div.buttons button {
     background-color: black;
-    width: 80px;
-    height: 40px;
+    width: 60px;
+    height: 30px;
     border: none;
     color:#56ba9d;
-    font-size: 15px;
+    font-size: 10px;
     padding: 10px 5px;
     border: 1px solid rgba(165, 165, 165, 0.208);
     border-radius: 40px;
