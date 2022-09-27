@@ -23,6 +23,7 @@ function showAddPost() {
 
 function showReply() {
 
+
     if(document.querySelector('#replyToComment').classList.contains('hide')) {
         document.querySelector('#replyToComment').classList.remove('hide')
         document.querySelector('#commentInput').value = ''
@@ -31,6 +32,8 @@ function showReply() {
     } else {
         document.querySelector('#replyToComment').classList.add('hide')
         document.querySelector('nav').style.opacity = '90%'
+        document.querySelector('#commentUser').textContent = ''
+
         // document.querySelector('nav').style.position = 'relative'
 
     }

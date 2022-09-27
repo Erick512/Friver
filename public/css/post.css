@@ -36,11 +36,12 @@ i.fa-plus.rotate {
 }
 
 .goBackDiv button {
+    position: fixed;
+    bottom: 30px;
     background-color: black;
     border: none;
     color: white;
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 30px;
 }
 
 #goBack {
@@ -94,6 +95,7 @@ i.fa-plus.rotate {
     line-height: 30px;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
+    resize: none;
 }
 
 #addComment .buttons, 
@@ -188,23 +190,32 @@ i.fa-plus.rotate {
     justify-content: space-between;
 }
 
+
 #post div div.buttons button, .commentBtns button {
     background-color: black;
-    width: 80px;
+    min-width: 80px;
     height: 40px;
     border: none;
-    color:#56ba9d;
+    color: gainsboro;
+    /* color: white; */
     font-size: 15px;
-    padding: 10px 5px;
+    padding: 10px 10px;
     border: 1px solid rgba(165, 165, 165, 0.415);
     border-radius: 40px;
 }
+
+#post div div.buttons button.userLikedAlready {
+    color: #56ba9d;
+}
+
+
 
 #post div div.buttons button:hover {
     transform: scale(.8);
 }
 
 #post div div.buttons button i {
+    /* color: white; */
     padding-left: 10px;
 }
 
@@ -268,21 +279,22 @@ i.fa-plus.rotate {
     transform: scale(.9);
 }
 
-.commentBtns > button {
-    margin-left: 10px;
-}
-
 
 .commentBtns button {
     display: inline-block;
-    width: 50px;
+    min-width: 50px;
     height: 25px;
     font-size: 10px;
-    padding: 8px 3px;
+    padding: 8px 5px;
 }
 
 .commentBtns button i {
+    /* color: white; */
     padding-left: 5px;
+}
+
+.commentBtns button.userLikedAlready {
+    color: #56ba9d;
 }
 
 #replies {

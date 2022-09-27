@@ -10,5 +10,6 @@ router.post('/createPost', ensureAuth, upload.single("file") ,feedController.cre
 router.put('/likePost/:id', feedController.likePost)
 router.put('/likeFeedPost/:id', feedController.likeFeedPost)
 router.get('/getPost/:id', feedController.getPost)
+router.delete('/deletePost/:id', feedController.deletePost)
 
 module.exports = router

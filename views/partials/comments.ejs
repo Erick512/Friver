@@ -7,13 +7,22 @@
 	</div>
 	<div class="commentBtns">
 		<form action="/comments/likeComment/<%= comment._id %>?_method=PUT" method="POST">
-			<button type="submit" class="fa-solid fa-thumbs-up">
-				<% if( comment.likes != 0) { %>
-					<i> <%= comment.likes %> </i>
-				<%}%> 
-			</button>
+			<% if(comment.usersLiked.includes(post.userName)) { %>
+ 
+				<button type="submit" class="fa-solid fa-thumbs-up userLikedAlready">
+					<% if(comment.likes != 0) { %>
+						<i> <%= comment.likes %></i>
+					<%}%> 
+				</button>
+			<% } else { %>
+				<button type="submit" class="fa-solid fa-thumbs-up">
+					<% if(comment.likes != 0) { %>
+						<i> <%= comment.likes %></i>
+					<%}%> 
+				</button>
+			<% } %>
 		</form>
-		<button class="fa-solid fa-reply replyToComment"></button>
+		<!-- <button class="fa-solid fa-reply replyToComment"></button> -->
 	</div>
 
 	<div id="replies">
@@ -30,7 +39,8 @@
 
 <form action="/comments/createComment/<%=post._id%>/<%=comment._id%>" id="replyToComment" class="hide" method="POST">
 	<div class="buttons">
-		<h3>Replying to: <span><%= comment.userName %></span></h3>
+		<!-- <h3>Replying to: <span id="commentUser"><%= comment.userName %></span></h3> -->
+		<h3>Add Reply</h3>
 		<div>
 			<button type="button" class="cancelReply">Cancel</button>                
 			<button class="Reply">Reply</button>  

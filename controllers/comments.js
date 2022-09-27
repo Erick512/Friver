@@ -22,17 +22,28 @@ module.exports = {
     try {
 
       const comment = await Comment.findById(req.params.id)
+
+      if(!comment.usersLiked.includes(req.user.userName)) {
+
+        await Comment.findOneAndUpdate(
+          {
+            _id: req.params.id
+          },
+          {
+           $push: { usersLiked: req.user.userName }
+          }
+        )
       
-      await Comment.findOneAndUpdate(
-        { _id: req.params.id },
-        {
-          $inc: { likes: 1 },
-        }
-      );
-      console.log(comment.post.id)
-      console.log(req.params.id)
-      console.log("Likes +1");
-      res.redirect(`/feed/getPost/${comment.post}`);
+        await Comment.findOneAndUpdate(
+          { _id: req.params.id },
+          {
+            $inc: { likes: 1 },
+          }
+        );
+  
+      console.log("Likes +1 from " + req.user.userName);
+      }
+      res.redirect(`/feed/getPost/${comment.post}#comments`);
     } catch (err) {
       console.log('error here at contoller')
       console.log(err);

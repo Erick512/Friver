@@ -62,11 +62,21 @@
                     <div class="buttons">
                         <%= console.log(post._id) %>
                         <form action="/feed/likePost/<%= post._id %>?_method=PUT" method="POST">
-                            <button type="submit" class="fa-solid fa-thumbs-up">
-                                <% if(post.likes != 0) { %>
-                                    <i> <%= post.likes %> </i>
-                                <%}%> 
-                            </button>
+
+                            <% if(post.usersLiked.includes(post.userName)) { %>
+ 
+                                <button type="submit" class="fa-solid fa-thumbs-up userLikedAlready">
+                                    <% if(post.likes != 0) { %>
+                                        <i> <%= post.likes %></i>
+                                    <%}%> 
+                                </button>
+                            <% } else { %>
+                                <button type="submit" class="fa-solid fa-thumbs-up">
+                                    <% if(post.likes != 0) { %>
+                                        <i> <%= post.likes %></i>
+                                    <%}%> 
+                                </button>
+                            <% } %>
                         </form>
                         <button class="fa-regular fa-comment commentBtn"></button>
                         <!-- <button class="fa-solid fa-share"></button> -->

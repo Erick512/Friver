@@ -19,7 +19,11 @@ const PostSchema = new mongoose.Schema({
   },
   likes: {
     type: Number,
-    required: true,
+    required: true
+  },
+  usersLiked: {
+    type: [String],
+    required: false
   },
   userName: {
     type: String,

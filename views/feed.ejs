@@ -66,19 +66,33 @@
                     <%}%>
 
                     <div class="buttons">
-                        <%= console.log(post._id) %>
                         <form action="/feed/likeFeedPost/<%= post._id %>?_method=PUT" method="POST">
-                            <button type="submit" class="fa-solid fa-thumbs-up">
-                                <% if(post.likes != 0) { %>
-                                    <i> <%= post.likes %> </i>
-                                <%}%> 
-                            </button>
+
+                            <% if(post.usersLiked.includes(post.userName)) { %>
+ 
+                                <button type="submit" class="fa-solid fa-thumbs-up userLikedAlready">
+                                    <% if(post.likes != 0) { %>
+                                        <i> <%= post.likes %></i>
+                                    <%}%> 
+                                </button>
+                            <% } else { %>
+                                <button type="submit" class="fa-solid fa-thumbs-up">
+                                    <% if(post.likes != 0) { %>
+                                        <i> <%= post.likes %></i>
+                                    <%}%> 
+                                </button>
+                            <% } %>
                         </form>
-                        <button class="fa-regular fa-comment">
+                        <a href="/feed/getPost/<%= post._id %>#comments"><button class="fa-regular fa-comment">
                             <!-- <% if(post.comment != 0) { %>
                                 <i> <%= post.likes %> </i>
                             <%}%>  -->
-                        </button>
+                        </button></a>
+                        <% if(user.id == post.user) {%>
+                            <form action="/feed/deletePost/<%= post._id %>?_method=DELETE" method="POST">
+                                <button class="fa-solid fa-trash"></button>
+                            </form>
+                        <%}%>
                         <!-- <button class="fa-solid fa-share"></button> -->
                     </div>
                     </a>
