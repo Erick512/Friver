@@ -24,8 +24,6 @@ main {
         -ms-flex-align: flex-start;
             align-items:flex-start;
     height: 100%;
-    /* margin: 100px auto 200px auto;  */
-    /* flex-wrap: wrap; TEMP */
     margin-top: 100px;
 }
 
