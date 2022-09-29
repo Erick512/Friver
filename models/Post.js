@@ -46,5 +46,4 @@ PostSchema.virtual('likes', {
   count: true
 });
 
-
 module.exports = mongoose.model("Post", PostSchema);
