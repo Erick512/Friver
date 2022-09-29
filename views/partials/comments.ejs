@@ -1,50 +1,37 @@
-<div id="commentBlock">
+<div class="commentBlock">
 	<div class="commentHeading">
 		<h3><%= comment.userName %></h3>
 	</div>
 	<div class="comment">
-		<h4><%= comment.comment %></h4>
+		<h4><%= comment.text %></h4>
 	</div>
-	<div class="commentBtns">
+	<div class="commentBtns collapse show" id="addCommentCollapse-<%= comment.id %>">
 		<form action="/comments/likeComment/<%= comment._id %>?_method=PUT" method="POST">
-			<% if(comment.usersLiked.includes(post.userName)) { %>
- 
-				<button type="submit" class="fa-solid fa-thumbs-up userLikedAlready">
-					<% if(comment.likes != 0) { %>
-						<i> <%= comment.likes %></i>
-					<%}%> 
-				</button>
-			<% } else { %>
-				<button type="submit" class="fa-solid fa-thumbs-up">
-					<% if(comment.likes != 0) { %>
-						<i> <%= comment.likes %></i>
-					<%}%> 
-				</button>
-			<% } %>
+			<button type="submit" class="fa-solid fa-thumbs-up">
+				<% if(comment.likes != 0) { %>
+					<i> <%= comment.likes %></i>
+				<%}%> 
+			</button>
 		</form>
-		<!-- <button class="fa-solid fa-reply replyToComment"></button> -->
+		<button class="fa-solid fa-reply replyToComment collapsed" type="button" data-bs-toggle='collapse' data-bs-target="#addCommentCollapse-<%= comment.id %>"></button>
+	</div>
+
+	<div class="replySection collapse" id="addCommentCollapse-<%= comment.id %>">
+		<form action="/comments/createComment/<%=post.id%>/<%=comment.id%>" method="POST">
+			<input type="text" placeholder="replying to: <%= comment.userName %>" name="commentInput">
+			<button class="fa-solid fa-reply"></button>
+			<button type="button" class="fa-solid fa-x"  data-bs-toggle='collapse' data-bs-target="#addCommentCollapse-<%= comment.id %>"></button>
+		</form>
 	</div>
 
 	<div id="replies">
 
+		<%= console.log(comment.comments) %>
+
 		<% for (const subComment of comment.comments || []) { %>
 	
-		<%- include('comments', {post, userId, comment: subComment, depth: depth + 1}) -%>
+		<%- include('comments', {post, user, comment: subComment, depth: depth + 1}) -%>
 			
 		<%}%>
 	</div>
 </div>
-
-<!-- add reply form -->
-
-<form action="/comments/createComment/<%=post._id%>/<%=comment._id%>" id="replyToComment" class="hide" method="POST">
-	<div class="buttons">
-		<!-- <h3>Replying to: <span id="commentUser"><%= comment.userName %></span></h3> -->
-		<h3>Add Reply</h3>
-		<div>
-			<button type="button" class="cancelReply">Cancel</button>                
-			<button class="Reply">Reply</button>  
-		</div>               
-	</div>
-	<textarea name="commentInput" id="commentInput" autofocus cols="30" rows="5" placeholder="Add comment"></textarea>
-</form>

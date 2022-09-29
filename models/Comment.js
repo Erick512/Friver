@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const CommentSchema = new mongoose.Schema({
-  comment: {
+  text: {
     type: String,
     required: true,
   },
@@ -13,37 +13,35 @@ const CommentSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  userId: {
+  user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
-  },
-  usersLiked: {
-    type: [String],
-    required: false
+    required: true,
+    autopopluate: true
   },
   post: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Post"
   },
-  commentID: {
+  comment: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Comment",
   },
-  // replies: [
-  //   {
-  //     type: mongoose.SchemaTypes.ObjectId,
-  //     ref: 'Comment'
-  //   }
-  // ],
-}, {timestamps: true});
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+}, {
+  toObject: {virtuals: true}
+});
 
-// CommentSchema.virtual('comments', {
-//   ref: 'Comment',
-//   localField: '_id',
-//   foreignField: 'comment',
-//   autopopulate: true
-// });
+CommentSchema.virtual('comments', {
+  ref: 'Comment',
+  localField: '_id',
+  foreignField: 'comment',
+  autopopulate: true
+});
 
-// CommentSchema.plugin(require('mongoose-autopopulate'));
+CommentSchema.plugin(require('mongoose-autopopulate'));
 
 module.exports = mongoose.model("Comment", CommentSchema);

@@ -5,12 +5,12 @@ module.exports = {
     try {
 
       await Comment.create({
-        comment: req.body.commentInput,
+        text: req.body.commentInput,
         likes: 0,
         userName: req.user.userName,
-        userId: req.user,
-        post: req.params.postId,
-        commentID: req.params.commentId
+        user: req.user,
+        post: req.params.commentId ? undefined : req.params.postId ,
+        comment: req.params.commentId
       });
       console.log("Comment has been added!");
       res.redirect(`/feed/getPost/${req.params.postId}`);
@@ -22,17 +22,6 @@ module.exports = {
     try {
 
       const comment = await Comment.findById(req.params.id)
-
-      if(!comment.usersLiked.includes(req.user.userName)) {
-
-        await Comment.findOneAndUpdate(
-          {
-            _id: req.params.id
-          },
-          {
-           $push: { usersLiked: req.user.userName }
-          }
-        )
       
         await Comment.findOneAndUpdate(
           { _id: req.params.id },
@@ -42,7 +31,6 @@ module.exports = {
         );
   
       console.log("Likes +1 from " + req.user.userName);
-      }
       res.redirect(`/feed/getPost/${comment.post}#comments`);
     } catch (err) {
       console.log('error here at contoller')

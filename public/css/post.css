@@ -35,16 +35,11 @@ i.fa-plus.rotate {
     margin: auto;
 }
 
-.goBackDiv button {
-    position: fixed;
-    bottom: 30px;
+#goBack{
     background-color: black;
     border: none;
     color: white;
-    font-size: 30px;
-}
-
-#goBack {
+    font-size: 20px;
 }
 
 #addComment, #replyToComment  {
@@ -222,16 +217,17 @@ i.fa-plus.rotate {
 /* Comments */
 
 #comments {
-    width: 100%;
+    width: 90%;
     margin: 20px auto;
+    padding-bottom: 50px;
 }
 
 #comments > h3 {
-    width: 90%;
+    width: 100%;
     margin: auto;
 }
 
-#commentBlock {
+.commentBlock {
     width: 100%;
 }
 
@@ -248,8 +244,8 @@ i.fa-plus.rotate {
 
 /* comment block */
 
-#commentBlock {
-    width: 90%;
+.commentBlock {
+    width: 100%;
     border-left: 1px solid rgba(90, 90, 90, 0.754);
     padding-left: 10px;
     margin: 15px auto;
@@ -265,11 +261,11 @@ i.fa-plus.rotate {
 
 /* comment */
 
-#commentBlock .comment {
+.commentBlock .comment {
     padding-top: 10px;
 }
 
-#comments .commentBtns {
+#comments .commentBtns.show {
     display: flex;
     justify-content: right;
     margin-top: 10px;
@@ -277,6 +273,10 @@ i.fa-plus.rotate {
 
 .commentBtns button:hover{
     transform: scale(.9);
+}
+
+.commentBtns {
+    display: none;
 }
 
 
@@ -297,9 +297,42 @@ i.fa-plus.rotate {
     color: #56ba9d;
 }
 
-#replies {
-    margin-left: 20px;
+
+/* reply section */
+
+.replySection {
+    display: none;
 }
+
+.replySection.show {
+    display: block;
+}
+
+.commentBlock .replySection form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.commentBlock .replySection .fa-x, .commentBlock .replySection .fa-reply {
+    height: 30px;
+    font-size: 20px;
+    border: none;
+    background-color: black;
+    color: #56ba9d;
+}
+
+.commentBlock input[type=text]{
+    width: 75%;
+    border: none;
+    height: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    outline: 1px solid #25a7a2 !important;
+}
+
+
 
 @media (min-width: 800px) {
 
@@ -309,6 +342,11 @@ i.fa-plus.rotate {
     }
 
     #addComment {
+        width: 700px;
+        margin-top: 50px;
+    }
+
+    #replyToComment {
         width: 700px;
         margin-top: 50px;
     }

@@ -1,6 +1,7 @@
 document.querySelector('.commentBtn').addEventListener('click', showAddPost)
 document.querySelector('.cancel').addEventListener('click', showAddPost)
-document.querySelector('.cancelReply').addEventListener('click', showReply)
+// document.querySelector('.replyToComment').addEventListener('click', showReply)
+// document.querySelector('.fa-x').addEventListener('click', showReply)  
 
 let replyBtns = document.querySelectorAll('.replyToComment')
 
@@ -21,20 +22,14 @@ function showAddPost() {
     }
 }
 
-function showReply() {
+// function showReply() {
 
-
-    if(document.querySelector('#replyToComment').classList.contains('hide')) {
-        document.querySelector('#replyToComment').classList.remove('hide')
-        document.querySelector('#commentInput').value = ''
-        // document.querySelector('nav').style.position = 'fixed'
-        document.querySelector('nav').style.opacity = '100%'
-    } else {
-        document.querySelector('#replyToComment').classList.add('hide')
-        document.querySelector('nav').style.opacity = '90%'
-        document.querySelector('#commentUser').textContent = ''
-
-        // document.querySelector('nav').style.position = 'relative'
-
-    }
-}
+    
+//     if(document.querySelector('.replySection').classList.contains('hide')) {
+//         document.querySelector('.replySection').classList.remove('hide')
+//         document.querySelector('.commentBtns').classList.add('hide')
+//     } else {
+//         document.querySelector('.commentBtns').classList.remove('hide')
+//         document.querySelector('.replySection').classList.add('hide')
+//     }
+// }

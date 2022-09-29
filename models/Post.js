@@ -21,10 +21,10 @@ const PostSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
-  usersLiked: {
-    type: [String],
-    required: false
-  },
+  // usersLiked: {
+  //   type: [String],
+  //   required: false,
+  // },
   userName: {
     type: String,
     required: true
@@ -33,6 +33,19 @@ const PostSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
-}, {timestamps: true});
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+}, {
+  toObject: {virtuals: true}
+});
+
+PostSchema.virtual('comments', {
+  ref: 'Comment',
+  localField: '_id',
+  foreignField: 'post'
+});
+
 
 module.exports = mongoose.model("Post", PostSchema);

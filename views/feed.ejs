@@ -67,21 +67,11 @@
 
                     <div class="buttons">
                         <form action="/feed/likeFeedPost/<%= post._id %>?_method=PUT" method="POST">
-
-                            <% if(post.usersLiked.includes(post.userName)) { %>
- 
-                                <button type="submit" class="fa-solid fa-thumbs-up userLikedAlready">
-                                    <% if(post.likes != 0) { %>
-                                        <i> <%= post.likes %></i>
-                                    <%}%> 
-                                </button>
-                            <% } else { %>
-                                <button type="submit" class="fa-solid fa-thumbs-up">
-                                    <% if(post.likes != 0) { %>
-                                        <i> <%= post.likes %></i>
-                                    <%}%> 
-                                </button>
-                            <% } %>
+                            <button type="submit" class="fa-solid fa-thumbs-up">
+                                <% if(post.likes != 0) { %>
+                                    <i> <%= post.likes %></i>
+                                <%}%> 
+                            </button>
                         </form>
                         <a href="/feed/getPost/<%= post._id %>#comments"><button class="fa-regular fa-comment">
                             <!-- <% if(post.comment != 0) { %>

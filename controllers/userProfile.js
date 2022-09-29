@@ -5,6 +5,7 @@ module.exports = {
     getProfile: async (req,res)=>{
         try{
             const profile = await Profile.findOne({userID:req.user.id})
+            console.log(profile)
             console.log(profile.userID, req.user.id)
             res.render('profile.ejs', {
                 user: req.user,
