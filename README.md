@@ -10,7 +10,7 @@ Friver is a website for rideshare drivers. Drivers create a profile that showcas
 
 **Design Pattern Used:** MVC (Model, View, Controller)
 
-**Tech used:** HTML, CSS, JavaScript, Node.js, express. 
+**Tech used:** HTML, CSS, JavaScript, Bootstrap, Node.js, express. 
 
 The wesbited uses html, css and js for the front-end. For the back end, it uses Node.js along with express as the enviroment. It also provides authentication to let users create and account. The authenticaton is built with passport.js and uses bycrypt to hash users passwords. MongoDB is used as the database to store user infromation and profiles. Mongoose is used along with MongoDB to have user and profile schemas. For architectural design, MVC is used to keep the website seperated into three logical components: Model, View, and Controller.
 
