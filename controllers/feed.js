@@ -24,7 +24,7 @@ module.exports = {
           } else {
             result = ''
           }
-    
+
           await Post.create({
             title: req.body.title,
             image: result.secure_url,
@@ -88,6 +88,7 @@ module.exports = {
     },
     deletePost: async (req, res) => {
       try {
+        
         // Find post by id
         let post = await (await Post.findById({ _id: req.params.id })).populate('comments');
         // Delete image from cloudinary
@@ -96,6 +97,7 @@ module.exports = {
         } else {
           result = ''
         }
+
         //delete comments width post id from db
 
         const commentIDs = [];
