@@ -88,7 +88,7 @@ module.exports = {
     },
     deletePost: async (req, res) => {
       try {
-        
+
         // Find post by id
         let post = await (await Post.findById({ _id: req.params.id })).populate('comments');
         // Delete image from cloudinary
