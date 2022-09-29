@@ -11,5 +11,4 @@ router.put('/likePost/:id', feedController.likePost)
 router.put('/likeFeedPost/:id', feedController.likeFeedPost)
 router.delete('/deletePost/:id', feedController.deletePost)
 
-
 module.exports = router
