@@ -172,6 +172,8 @@ i.fa-plus.rotate {
 
 #post div img {
     width: 90%;
+    height: 500px;
+    object-fit: cover;
     display: block;
     margin: auto;
     margin-bottom: 20px;
@@ -246,7 +248,7 @@ i.fa-plus.rotate {
 
 .commentBlock {
     width: 100%;
-    border-left: 1px solid rgba(90, 90, 90, 0.754);
+    border-left: 1px solid rgba(255, 253, 253, 0.148);
     padding-left: 10px;
     margin: 15px auto;
 }
@@ -300,6 +302,10 @@ i.fa-plus.rotate {
 
 /* reply section */
 
+#replies {
+    margin-left: 20px;
+}
+
 .replySection {
     display: none;
 }
@@ -326,19 +332,28 @@ i.fa-plus.rotate {
 .commentBlock input[type=text]{
     width: 75%;
     border: none;
-    height: 30px;
-    padding: 5px;
+    height: 35px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none !important;
     border-radius: 10px;
-    outline: 1px solid #25a7a2 !important;
 }
 
+/* enlarge image */
 
+.enlargedImage.hide {
+    visibility: hidden;
+}
 
 @media (min-width: 800px) {
 
     main {
         margin: auto;
         width: 700px;
+    }
+
+    .commentBlock input[type=text]{
+        width: 85%;
     }
 
     #addComment {

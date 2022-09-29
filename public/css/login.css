@@ -235,3 +235,9 @@ div#btns {
         margin-top: 10px;
     }
 }
+
+@media (min-width: 600px) {
+    main form {
+        width: 500px;
+    }
+}

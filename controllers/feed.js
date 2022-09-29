@@ -1,11 +1,13 @@
 const Post = require("../models/Post");
 const Comment = require("../models/Comment");
+const Like = require("../models/Like");
 const cloudinary = require('../middleware/cloudinary')
 
 module.exports = {
     getFeed: async (req, res) => {
+
       try {
-        const posts = await Post.find().sort({ createdAt: "desc" }).lean();
+        const posts = await Post.find().sort({ createdAt: "desc" }).populate('likes').lean();
         res.render("feed.ejs", { posts: posts, user: req.user});
       } catch (err) {
         console.log(err);
@@ -28,7 +30,6 @@ module.exports = {
             image: result.secure_url,
             cloudinaryId: result.public_id,
             caption: req.body.caption,
-            likes: 0,
             userName: req.user.userName,
             user: req.user.id,
           });
@@ -41,17 +42,15 @@ module.exports = {
       likeFeedPost: async (req, res) => {
 
         try {
+          const obj = { user: req.user.id, post: req.params.id };
+          if ((await Like.deleteOne(obj)).deletedCount) {
+            console.log("Likes -1");
+            return res.redirect(`/feed#${req.params.id}`);
+          }
+          await Like.create(obj);
 
-          const post = await Post.findById(req.params.id)
-
-            await Post.findOneAndUpdate(
-              { _id: req.params.id },
-              {
-                $inc: { likes: 1 },
-              }
-            );
-            console.log("Likes +1 from " + req.user.userName);
-            res.redirect(`/feed#${post.id}`);
+          console.log("Likes +1 from " + req.user.userName);
+          res.redirect(`/feed#${req.params.id}`);
         } catch (err) {
             console.log(err);
         }
@@ -60,26 +59,23 @@ module.exports = {
 
       try {
 
-        const post = await Post.findById(req.params.id)
-
-          await Post.findOneAndUpdate(
-            { _id: req.params.id },
-            {
-              $inc: { likes: 1 },
-            }
-          );
+        const obj = { user: req.user.id, post: req.params.id };
+          if ((await Like.deleteOne(obj)).deletedCount) {
+            console.log("Likes -1");
+            return res.redirect(`/feed/getPost/${req.params.id}`);
+          }
+          await Like.create(obj);
           console.log("Likes +1 from " + req.user.userName);
 
-          res.redirect(`/feed/getPost/${post.id}`);
+          res.redirect(`/feed/getPost/${req.params.id}`);
       } catch (err) {
           console.log(err);
       }
     },
     getPost: async (req, res) => {
       try {
-
-
-        const post = await (await Post.findById(req.params.id)).populate({
+        
+        const post = await Post.findById(req.params.id).populate('likes').populate({
           path: 'comments',
           populate: { path: 'user' }
         })
@@ -111,6 +107,10 @@ module.exports = {
         }
 
         await Comment.deleteMany({ _id: { $in: commentIDs}})
+
+        // delete likes 
+
+        await Like.deleteMany({ post: req.params.id });
 
         // Delete post from db
         await Post.deleteOne({ _id: req.params.id });

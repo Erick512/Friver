@@ -5,10 +5,6 @@ const CommentSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  likes: {
-    type: Number,
-    required: true,
-  },
   userName: {
     type: String,
     required: true
@@ -39,7 +35,7 @@ CommentSchema.virtual('comments', {
   ref: 'Comment',
   localField: '_id',
   foreignField: 'comment',
-  autopopulate: true
+  autopopulate: {maxDepth: 3}
 });
 
 CommentSchema.plugin(require('mongoose-autopopulate'));

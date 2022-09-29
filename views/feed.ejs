@@ -73,11 +73,9 @@
                                 <%}%> 
                             </button>
                         </form>
-                        <a href="/feed/getPost/<%= post._id %>#comments"><button class="fa-regular fa-comment">
-                            <!-- <% if(post.comment != 0) { %>
-                                <i> <%= post.likes %> </i>
-                            <%}%>  -->
-                        </button></a>
+                        <a href="/feed/getPost/<%= post._id %>#comments">
+                            <button class="fa-regular fa-comment"></button>
+                        </a>
                         <% if(user.id == post.user) {%>
                             <form action="/feed/deletePost/<%= post._id %>?_method=DELETE" method="POST">
                                 <button class="fa-solid fa-trash"></button>

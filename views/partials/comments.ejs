@@ -1,4 +1,6 @@
-<div class="commentBlock">
+<div class="commentBlock firstLevel">
+
+
 	<div class="commentHeading">
 		<h3><%= comment.userName %></h3>
 	</div>
@@ -13,7 +15,9 @@
 				<%}%> 
 			</button>
 		</form>
-		<button class="fa-solid fa-reply replyToComment collapsed" type="button" data-bs-toggle='collapse' data-bs-target="#addCommentCollapse-<%= comment.id %>"></button>
+		<% if( depth < 3 ) { %>
+			<button class="fa-solid fa-reply replyToComment collapsed" type="button" data-bs-toggle='collapse' data-bs-target="#addCommentCollapse-<%= comment.id %>"></button>
+		<% } %>
 	</div>
 
 	<div class="replySection collapse" id="addCommentCollapse-<%= comment.id %>">

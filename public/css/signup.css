@@ -127,7 +127,7 @@ input[type=email], input[type=password], input[type=text] {
     margin-right: 20px;
 }
 
-.logIn-button {
+.logIn-button, .signUp-button{
     width: 120px;
     height: 30px;
     font-family: 'Roboto', sans-serif;
@@ -148,7 +148,7 @@ input[type=email], input[type=password], input[type=text] {
     outline: none;
 }
 
-.logIn-button:hover {
+.logIn-button:hover, .signUp-button:hover {
 
     -webkit-transform: scale(.9);
 
@@ -195,6 +195,32 @@ input[type=email], input[type=password], input[type=text] {
     margin-top: 20px;
 }
 
+.hide {
+    display: none;
+}
+
+.divider {
+    width: 90%;
+    margin: 10px auto 10px auto;
+    border: 1px solid rgb(168, 168, 168, 0.6);
+}
+
+
+
+div#btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+div#btns {
+    margin-left: 20px;
+}
+
 @media (max-width: 400px) {
 
     main form {
@@ -213,5 +239,11 @@ input[type=email], input[type=password], input[type=text] {
 
     form .encapBtn input{
         margin-right: 10px;
+    }
+}
+
+@media (min-width: 600px) {
+    main form {
+        width: 500px;
     }
 }

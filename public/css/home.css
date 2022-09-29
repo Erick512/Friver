@@ -456,6 +456,7 @@ h2 {
     #third,
     #fourth {
         width: 80%;
+        margin: auto;
     }
 
     main section > div {
@@ -767,7 +768,7 @@ h2 {
     } */
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
 
 
     #second,

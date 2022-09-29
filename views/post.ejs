@@ -8,6 +8,7 @@
         
         <div id="dark"></div>
 
+
         <!-- Nav and sidebar -->
         <nav>
             <div id="topBar">
@@ -31,8 +32,11 @@
                 </ul>
             </div>
         </nav>
+        
+        <div class="enlargedImage"></div>
 
         <main class="container">
+
 
             <!-- add comment form -->
 
@@ -56,11 +60,13 @@
                     <h3 class="postUserName"><%= post.userName %></h3>
                     <h2 class="postTitle"><%= post.title %></h2>
                     <p class="postCaption"><%= post.caption %></p>
-                    <img src="<%= post.image %>" alt="">
+                    <% if(post.image) { %>
+                        <img src="<%= post.image %>" class="postImage" alt="postImage">
+                    <%}%>
                     <div class="buttons">
-                        <%= console.log(post._id) %>
                         <form action="/feed/likePost/<%= post._id %>?_method=PUT" method="POST">
                             <button type="submit" class="fa-solid fa-thumbs-up">
+
                                 <% if(post.likes != 0) { %>
                                     <i> <%= post.likes %></i>
                                 <%}%> 
