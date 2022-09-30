@@ -209,7 +209,6 @@ module.exports = {
           location: req.body.location,
           userName: req.user.userName,
           user: req.user,
-          expiresAt: Date.now() + 3600
         })
 
         console.log('created surge post')

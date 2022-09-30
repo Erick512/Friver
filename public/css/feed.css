@@ -145,7 +145,7 @@ i.fa-bolt:hover {
 #surgeSection {
     position: fixed;
     width: 100%;
-    height: 250px;
+    height: 300px;
     bottom: 0;
     transition: transform 250ms ease-in-out;
     /* background-color: rgb(29, 29, 29); */
@@ -155,8 +155,8 @@ i.fa-bolt:hover {
     z-index: 99;
     /* overflow-y: scroll; */
     box-shadow: -5px -5px 20px 5px rgba(0,0,0,0.75);
-/* -webkit-box-shadow: -5px -5px 20px 4px rgba(0,0,0,0.75);
--moz-box-shadow: -5px -5px 20px 4px rgba(0,0,0,0.75); */
+-webkit-box-shadow: -5px -5px 20px 5px rgba(0,0,0,0.75);
+-moz-box-shadow: -5px -5px 20px 5px rgba(0,0,0,0.75);
 }
 
 #surgeSection .surgeHeading {
@@ -170,6 +170,7 @@ i.fa-bolt:hover {
 }
 
 #surgeSection .surgeHeading button {
+    text-align: center;
     width: 80px;
     height: 30px;
     background-color: white;
