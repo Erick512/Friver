@@ -1,7 +1,5 @@
 const mongoose = require("mongoose");
 
-const timeExpiration = 3600
-
 const SurgeSchema = new mongoose.Schema({
     amount: {
         type: Number,
@@ -21,6 +19,7 @@ const SurgeSchema = new mongoose.Schema({
     },
     createdAt: {
         type: Date,
+        expires: '1h',
         default: Date.now
     }
 });
