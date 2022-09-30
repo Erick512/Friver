@@ -20,6 +20,7 @@ function showAddPost() {
         document.querySelector('#postSection').classList.remove('hide')
         document.querySelector('#title').value = ''
         document.querySelector('textarea').value = ''
+        document.querySelector('#title').focus()
         document.querySelector('nav').style.opacity = '100%'
     } else {
         document.querySelector('#postSection').classList.add('hide')
@@ -32,6 +33,9 @@ function showAddPost() {
 function showSurgePost() {
     if(document.querySelector('#surgeSection').classList.contains('hide')) {
         document.querySelector('#surgeSection').classList.remove('hide')
+        document.querySelector('#amount').value = ''
+        document.querySelector('#location').value = ''
+        document.querySelector('#amount').focus()
     } else {
         document.querySelector('#surgeSection').classList.add('hide')
     }
