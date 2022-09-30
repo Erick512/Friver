@@ -25,12 +25,15 @@ main {
 }
 
 i.fa-plus {
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 30px;
     width: 50px;
     height: 50px;
+    bottom: 20px;
+    right: 5%;
     color:  white;
     transition: all .3s ease-in-out;
     z-index: 99;
@@ -40,12 +43,15 @@ i.fa-plus {
 }
 
 i.fa-bolt {
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 30px;
     width: 50px;
     height: 50px;
+    bottom: 20px;
+    left: 5%;
     color: rgb(249, 0, 101); 
     z-index: 9;
     border-radius: 50%;
@@ -245,7 +251,7 @@ div.lables input:focus {
 #feed {
     width: 100%;
     margin: auto;
-    padding-bottom: 100px;
+    padding-bottom: 90px;
     margin-top: 70px;
 }
 
@@ -350,10 +356,6 @@ div.surgeBar div {
     padding-top: 10px;
 }
 
-#feed > div:last-of-type {
-    border-bottom: none;
-}
-
 #feed > div.topBorder:first-of-type {
     border-top: 10px solid rgba(255, 255, 255, 0.092);
 }
@@ -426,7 +428,7 @@ div.postHeading {
     margin: auto;
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid rgb(43, 43, 43);
+    border-top: 1px solid rgb(51, 51, 51);
     padding: 10px 20px;
 }
 
@@ -440,9 +442,9 @@ div.postHeading {
     border: none;
     /* color:#56ba9d; */
     color: gainsboro;
-    font-size: 12px;
+    font-size: 15px;
     padding: 10px 10px;
-    border: 1px solid rgba(165, 165, 165, 0.208);
+    /* border: 1px solid rgba(165, 165, 165, 0.3); */
     border-radius: 40px;
 }
 

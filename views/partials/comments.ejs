@@ -8,13 +8,6 @@
 		<h4><%= comment.text %></h4>
 	</div>
 	<div class="commentBtns collapse show" id="addCommentCollapse-<%= comment.id %>">
-		<form action="/comments/likeComment/<%= comment._id %>?_method=PUT" method="POST">
-			<button type="submit" class="fa-solid fa-thumbs-up">
-				<% if(comment.likes != 0) { %>
-					<i> <%= comment.likes %></i>
-				<%}%> 
-			</button>
-		</form>
 		<% if( depth < 3 ) { %>
 			<button class="fa-solid fa-reply replyToComment collapsed" type="button" data-bs-toggle='collapse' data-bs-target="#addCommentCollapse-<%= comment.id %>"></button>
 		<% } %>
