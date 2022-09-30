@@ -32,8 +32,11 @@
 
         <main class="container">
 
-            <i class="fa-solid fa-plus postBtn"></i>
-            <i class="fa-solid fa-bolt showSurgePost"></i>
+            <div id="postingBtns">
+                <i class="fa-solid fa-bolt showSurgePost"></i>
+                <i class="fa-solid fa-plus postBtn"></i>
+            </div>
+            
             
             <!-- Post Form -->
 
@@ -61,19 +64,21 @@
                  <div class="lables">
                      <label for="amount">Amount</label>
                      <div>
-                         <input type="number" name="amount" id="amount" placeholder="20">
+                         <input type="text" name="amount" id="amount" placeholder="20" pattern="\d*" maxlength="2">
                          <span>$</span>
                      </div>
                  </div>
                  <div class="lables">
                      <label for="location">City or Place</label>
-                     <input type="text" name="location" id="location" placeholder="Inglewood / Sofi Stadium">
+                     <input type="text" name="location" id="location" placeholder="Downtown, LA" maxlength="14">
                  </div>
              </form>
 
              <!-- Feed -->
 
             <section id="feed">
+
+                <% if(surges.length) { %>
 
                 <section id="surges">
 
@@ -89,16 +94,26 @@
                             <!-- <h5><%= surge.location %><br> posted by: <span><a href=""><%= surge.userName %></a></span></h5> -->
                             <span><%= surge.createdAt %> ago</span>
                         </div>
-
                     <%})%>
+
                 </section>
+
+                <%}%>
 
                 <% posts.forEach(post => { %>
 
+                <% if(surges.length) { %>
 
-                <div id="<%= post._id %>">
+                    <div id="<%= post._id %>" class="topBorder">
+                <% } else { %>
+                    <div id="<%= post._id %>">
+                <% } %>
+
                     <a href="/feed/getPost/<%= post._id %>">
-                    <h3><%= post.userName %><span>&#8226; <%= post.createdAt %></span></h3>
+                    <div class="postHeading">
+                        <img src="/images/avatar.png" alt="">
+                        <h3><%= post.userName %><span>&#8226; <%= post.createdAt %> ago</span></h3>
+                    </div>
                     <h2><%= post.title %></h2>
                     <p><%= post.caption %></p>
 

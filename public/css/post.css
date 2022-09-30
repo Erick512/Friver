@@ -150,17 +150,43 @@ i.fa-plus.rotate {
     -webkit-tap-highlight-color: transparent;
 }
 
+
+div.postHeading {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#post div.postHeading h3 {
+    margin: 0 0;
+    font-size: 20px;
+}
+
+#post div.postHeading img {
+    width: 20px;
+    height: 20px;
+    margin: 0 0;
+    margin-right: 5px;
+}
+
+#post div.postHeading h3 span {
+    color: gray;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
 #post div .postUserName, #post div .postCaption, #post div .postTitle {
     width: 90%;
     margin: auto;
 }
 
-#post div .postUserName {
-    margin-bottom: 20px;
+#post div div h3 {
     color: #56ba9d;
 }
 #post div .postTitle {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 25px;
 }
 

@@ -57,7 +57,10 @@
 
                 <div id="<%= post._id %>" class="post">
 
-                    <h3 class="postUserName"><%= post.userName %></h3>
+                    <div class="postHeading">
+                        <img src="/images/avatar.png" alt="">
+                        <h3><%= post.userName %><span>&#8226; <%= createdAt %> ago</span></h3>
+                    </div>
                     <h2 class="postTitle"><%= post.title %></h2>
                     <p class="postCaption"><%= post.caption %></p>
                     <% if(post.image) { %>

@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 
-const LikeSchema = new mongoose.Schema({
+const timeExpiration = 3600
+
+const SurgeSchema = new mongoose.Schema({
     amount: {
         type: Number,
         required: true
@@ -19,8 +21,9 @@ const LikeSchema = new mongoose.Schema({
     },
     createdAt: {
         type: Date,
-        default: Date.now()
+        expires: '5m',
+        default: Date.now
     }
 });
 
-module.exports = mongoose.model("Surge", LikeSchema);
+module.exports = mongoose.model("Surge", SurgeSchema);

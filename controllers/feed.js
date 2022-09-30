@@ -12,37 +12,70 @@ function timeSince(date) {
   var interval = seconds / 31536000;
 
   if (interval > 1) {
-    return Math.floor(interval) + " yrs";
+    return Math.floor(interval) +  interval == 1 ? " yr" : " yrs";
   }
   interval = seconds / 2592000;
   if (interval > 1) {
-    return Math.floor(interval) + " months";
+    return Math.floor(interval) + (interval < 2 ? " month" : " months");
   }
   interval = seconds / 86400;
   if (interval > 1) {
-    return Math.floor(interval) + " days";
+    return Math.floor(interval) + (interval < 2 ? " day" : " days");
   }
   interval = seconds / 3600;
   if (interval > 1) {
-    return Math.floor(interval) + " hrs";
+    return Math.floor(interval) + (interval < 2 ? " hr" : " hrs");
   }
   interval = seconds / 60;
   if (interval > 1) {
-    return Math.floor(interval) + " mins";
+    return Math.floor(interval) + (interval < 2 ? " min" : " mins");
   }
-  return Math.floor(seconds) + " seconds";
+  return Math.floor(seconds) + " sec";
 }
+
+function lessThanHr(date) {
+
+  var seconds = Math.floor((new Date() - date) / 1000);
+
+  var interval = seconds / 31536000;
+
+  if (interval > 1) {
+    return false
+  }
+  interval = seconds / 2592000;
+  if (interval > 1) {
+    return false
+  }
+  interval = seconds / 86400;
+  if (interval > 1) {
+    return false
+  }
+  interval = seconds / 3600;
+  if (interval > 1) {
+    return true
+  }
+  interval = seconds / 60;
+  if (interval > 1) {
+    return true
+  }
+  return true
+}
+
 
 module.exports = {
     getFeed: async (req, res) => {
 
       try {
         const posts = await Post.find().sort({ createdAt: "desc" }).populate('likes').lean();
-        const surges = await Surge.find().sort({createdAt: "desc"}).lean()
+        let surges = await Surge.find().sort({createdAt: "desc"}).lean()
 
         posts.map(post => {
           post.createdAt = timeSince(post.createdAt)
         })
+
+        //get surges that are under an hr new and format their date
+
+        surges = surges.filter( surge => lessThanHr(surge.createdAt) )
 
         surges.map(surge => {
           surge.createdAt = timeSince(surge.createdAt)
@@ -119,8 +152,13 @@ module.exports = {
           path: 'comments',
           populate: { path: 'user' }
         })
+
+        //format created at date
+        const createdAt = timeSince(post.createdAt)
+
         const comments = post.comments
-        res.render("post.ejs", {post: post, user: req.user, comments: comments})
+
+        res.render("post.ejs", {post: post, createdAt: createdAt, user: req.user, comments: comments})
 
       } catch(err){
         console.log(err)
@@ -171,6 +209,7 @@ module.exports = {
           location: req.body.location,
           userName: req.user.userName,
           user: req.user,
+          expiresAt: Date.now() + 3600
         })
 
         console.log('created surge post')
