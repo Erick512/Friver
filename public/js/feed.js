@@ -1,6 +1,9 @@
 document.querySelector('.postBtn').addEventListener('click', showAddPost)
 document.querySelector('.cancel').addEventListener('click', showAddPost)
 
+document.querySelector('.showSurgePost').addEventListener('click', showSurgePost)
+document.querySelector('.cancelSurgePost').addEventListener('click', showSurgePost)
+
 document.querySelector('#imageUpload').addEventListener('change', (event) => {
     const [file] = document.querySelector('#imageUpload').files
 
@@ -23,5 +26,13 @@ function showAddPost() {
         document.querySelector('.postBtn').classList.remove('rotate')
         document.querySelector('nav').style.opacity = '90%'
 
+    }
+}
+
+function showSurgePost() {
+    if(document.querySelector('#surgeSection').classList.contains('hide')) {
+        document.querySelector('#surgeSection').classList.remove('hide')
+    } else {
+        document.querySelector('#surgeSection').classList.add('hide')
     }
 }

@@ -32,6 +32,24 @@ i.fa-plus {
     border: 1px solid rgba(255, 255, 255, 0.209);
 }
 
+i.fa-bolt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    left: 20px;
+    color: rgb(249, 0, 101); 
+    transition: all .3s ease-in-out;
+    z-index: 9;
+    border-radius: 50%;
+    background-color: #00000020;
+    border: 1px solid rgba(255, 255, 255, 0.209);
+}
+
 i.fa-plus.rotate {
     transform: rotate(45deg);
 }
@@ -52,7 +70,7 @@ i.fa-plus.rotate {
 }
 
 
-.hide {
+#postSection.hide {
     transform: translateY(-150%);
 }
 
@@ -109,26 +127,214 @@ i.fa-plus.rotate {
     margin-bottom: 100px;
 }
 
+/* Post Surge Section */
+
+#surgeSection {
+    position: fixed;
+    width: 100%;
+    height: 300px;
+    bottom: 0;
+    padding: 30px 20px 0 20px;
+    transition: transform 250ms ease-in-out;
+    background-color: rgb(29, 29, 29);
+    /* background-color: rgba(0, 0, 0, 0.392); */
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    z-index: 99;
+    /* overflow-y: scroll; */
+    box-shadow: 2px -9px 19px 5px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px -9px 19px 5px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px -9px 19px 5px rgba(0,0,0,0.75);
+}
+
+#surgeSection .surgeHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#surgeSection .surgeHeading button {
+
+    background-color: rgb(29, 29, 29);
+    border: none;
+    color: rgb(249, 0, 101);
+    font-size: 20px; 
+}
+
+#surgeSection h2 {
+    font-size: 25px;
+}
+
+#surgeSection > div {
+    margin-bottom: 40px;
+}
+
+div.lables input::-webkit-outer-spin-button,
+div.lables input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+div.lables input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+
+#surgeSection div.lables{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+div.lables div span {
+    color: rgb(249, 0, 101);
+}
+
+div.lables input{
+    width: 150px;
+    border-radius: 10px;
+    height: 40px;
+    padding: 5px;
+    font-size: 15px;
+    border: none;
+}
+
+
+div.lables input[type=number] {
+    width: 70px;
+    text-align: right;
+    font-size: 20px;
+}
+
+
+div.lables input:focus {
+    outline: none;
+}
+
+#surgeSection.hide {
+    transform: translateY(150%);    
+}
+
 /* Post */
 
 #feed {
     width: 100%;
     margin: auto;
     padding-bottom: 70px;
+    margin-top: 70px;
 }
 
 #feed a {
     text-decoration: none;
 }
 
-#feed div:first-child {
-    margin-top: 70px;
+/* surges bar */
+
+#feed  section#surges {
+    display: flex;
+    width: 90%;
+    height: 70px;
+    margin: 20px auto;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    /* -webkit-overflow-scrolling: touch; */   
 }
+
+#feed  section#surges::-webkit-scrollbar {
+    display: none;
+}
+
+#surges div.surgeBar {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 60%; for big screen */
+    width: 100%;
+    padding: 15px;
+    height: 100%;
+    /* background-color: rgb(131, 46, 46); */
+    /* background-color: #316657; */
+    background-color: rgb(29, 29, 29);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 40px;
+    scroll-snap-align: start;
+}
+
+div.surgeBar div {
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    flex-direction: column;
+}
+
+#surges div div {
+    line-height: 25px;
+}
+
+#surges div div h5 {
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+
+#surges div div h6 {
+    width: 100%;
+    height: 8px;
+    font-size: 13px;
+    text-align: center;
+}
+
+#surges div h6 span a{
+    color:#56ba9d;
+} 
+
+#surges div h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(249, 0, 101); 
+    font-weight: 700;
+    width: 60px;
+    height: 100%;
+    border-radius: 40px;
+    box-shadow: 0px 0px 15px 4px rgba(249,0,101,0.75);
+/* -webkit-box-shadow: 4px 4px 12px 1px rgba(249,0,101,0.75);
+-moz-box-shadow: 4px 4px 12px 1px rgba(249,0,101,0.75); */
+}
+
+
+#surges a {
+    width: 100%;
+}
+
+#surges div:not(:last-of-type) {
+    margin-right: 20px;
+} 
+
+.surgeBar > span {
+    width: 50px;
+    font-size: 14px;
+}
+
+/* feed posts */
 
 #feed > div {
     width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.092);
+    border-bottom: 10px solid rgba(255, 255, 255, 0.092);
     padding: 30px 0;
+}
+
+#feed > div:first-of-type {
+    border-top: 10px solid rgba(255, 255, 255, 0.092);
 }
 
 #feed > div > a {
@@ -142,6 +348,10 @@ i.fa-plus.rotate {
     margin: auto;
 }
 
+#feed a h3 > span {
+    padding-left: 10px;
+    color: gray;
+}
 
 #feed div h3 {
     margin-bottom: 10px;
@@ -198,7 +408,8 @@ i.fa-plus.rotate {
 #feed div div.buttons button:hover {
     transform: scale(.8);
 }
-#feed div div.buttons button.userLikedAlready {
+
+#feed div div.buttons button i {
     color: #56ba9d;
 }
 

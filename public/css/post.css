@@ -201,7 +201,7 @@ i.fa-plus.rotate {
     border-radius: 40px;
 }
 
-#post div div.buttons button.userLikedAlready {
+#post div div.buttons button i {
     color: #56ba9d;
 }
 
@@ -295,7 +295,7 @@ i.fa-plus.rotate {
     padding-left: 5px;
 }
 
-.commentBtns button.userLikedAlready {
+.commentBtns button i {
     color: #56ba9d;
 }
 

@@ -33,6 +33,7 @@
         <main class="container">
 
             <i class="fa-solid fa-plus postBtn"></i>
+            <i class="fa-solid fa-bolt showSurgePost"></i>
             
             <!-- Post Form -->
 
@@ -48,15 +49,56 @@
                 <img id="selectedImage" alt="">       
              </form>
 
+             <!-- Post Surge -->
+
+             <form action="/feed/createSurge" method="POST" id="surgeSection" class="hide">
+                 <div class="surgeHeading">
+                    <button type="button" class="cancelSurgePost">Cancel</button>
+                    <h2>Post Surge</h2>
+                    <button>Post</button>
+                 </div>
+
+                 <div class="lables">
+                     <label for="amount">Amount</label>
+                     <div>
+                         <input type="number" name="amount" id="amount" placeholder="20">
+                         <span>$</span>
+                     </div>
+                 </div>
+                 <div class="lables">
+                     <label for="location">City or Place</label>
+                     <input type="text" name="location" id="location" placeholder="Inglewood / Sofi Stadium">
+                 </div>
+             </form>
+
              <!-- Feed -->
 
             <section id="feed">
 
+                <section id="surges">
+
+                    <% surges.forEach(surge => { %>
+                        <div class="surgeBar">
+                            <h4><%= surge.amount %>$</h4>
+                            <div>
+                                <h5><%= surge.location %></h5>
+                                <h6>posted by: <span>
+                                    <a href=""><%= surge.userName %></a>
+                                </span></h6>
+                            </div>
+                            <!-- <h5><%= surge.location %><br> posted by: <span><a href=""><%= surge.userName %></a></span></h5> -->
+                            <span><%= surge.createdAt %> ago</span>
+                        </div>
+
+                    <%})%>
+                </section>
+
                 <% posts.forEach(post => { %>
+
 
                 <div id="<%= post._id %>">
                     <a href="/feed/getPost/<%= post._id %>">
-                    <h3><%= post.userName %></h3>
+                    <h3><%= post.userName %><span>&#8226; <%= post.createdAt %></span></h3>
                     <h2><%= post.title %></h2>
                     <p><%= post.caption %></p>
 

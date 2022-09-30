@@ -1,14 +1,54 @@
 const Post = require("../models/Post");
 const Comment = require("../models/Comment");
 const Like = require("../models/Like");
-const cloudinary = require('../middleware/cloudinary')
+const Surge = require('../models/Surge')
+const cloudinary = require('../middleware/cloudinary');
+
+
+function timeSince(date) {
+
+  var seconds = Math.floor((new Date() - date) / 1000);
+
+  var interval = seconds / 31536000;
+
+  if (interval > 1) {
+    return Math.floor(interval) + " yrs";
+  }
+  interval = seconds / 2592000;
+  if (interval > 1) {
+    return Math.floor(interval) + " months";
+  }
+  interval = seconds / 86400;
+  if (interval > 1) {
+    return Math.floor(interval) + " days";
+  }
+  interval = seconds / 3600;
+  if (interval > 1) {
+    return Math.floor(interval) + " hrs";
+  }
+  interval = seconds / 60;
+  if (interval > 1) {
+    return Math.floor(interval) + " mins";
+  }
+  return Math.floor(seconds) + " seconds";
+}
 
 module.exports = {
     getFeed: async (req, res) => {
 
       try {
         const posts = await Post.find().sort({ createdAt: "desc" }).populate('likes').lean();
-        res.render("feed.ejs", { posts: posts, user: req.user});
+        const surges = await Surge.find().sort({createdAt: "desc"}).lean()
+
+        posts.map(post => {
+          post.createdAt = timeSince(post.createdAt)
+        })
+
+        surges.map(surge => {
+          surge.createdAt = timeSince(surge.createdAt)
+        })
+
+        res.render("feed.ejs", { posts: posts, surges:surges, user: req.user});
       } catch (err) {
         console.log(err);
       }
@@ -121,6 +161,23 @@ module.exports = {
       } catch (err) {
         console.log(err)
         res.redirect("/feed");
+      }
+    },
+    createSurge: async (req, res) => {
+      try {
+
+        await Surge.create({
+          amount: req.body.amount,
+          location: req.body.location,
+          userName: req.user.userName,
+          user: req.user,
+        })
+
+        console.log('created surge post')
+        res.redirect('/feed')
+
+      } catch(err) {
+        console.log(err)
       }
     }
 }
