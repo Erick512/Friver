@@ -242,6 +242,13 @@ div.lables input:focus {
     outline: none;
 }
 
+#surgeSection > h5 {
+    width: 100%;
+    text-align: center;
+    color: rgb(152, 152, 152);
+    margin-top: 40px;
+}
+
 #surgeSection.hide {
     transform: translateY(150%);    
 }
